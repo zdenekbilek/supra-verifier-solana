@@ -19,6 +19,11 @@ pub const CANONICAL_PUBLIC_KEY: [u8; 128] = hex!(
      4c261cb7164e8131fae9a36906fa1b430fd336ab0d55c2d2b4f1ce1336b71e2
      1df112b0b8d28da9f29216fb44ce825ab1dfccc6c2414ab8407e61a839838527"
 );
+/// Historical committee-0 G2 key from the same independently read snapshot.
+/// Select committee 0 explicitly with `Proof::verify_with`; the default remains 1.
+pub const HISTORICAL_COMMITTEE_0_PUBLIC_KEY: [u8; 128] = hex!(
+    "0671a6b13d4c2a4a5d6120809f6c13646096c481c330262855d26f90f7c2aabf297f48f4e39995914214c5398501b63f2a08bdb58367765262be42383a8a910a053d6ad98fba37e3d303e15aca887cb33d48c32de0add55de5ae0a5d658076d808004c7c7f1c92003f468e1549543321ada9d926b858db4f5663dc431536d8e2"
+);
 const NEGATIVE_G2: [u8; 128] = hex!(
     "198e9393920d483a7260bfb731fb5d25f1aa493335a9e71297e485b7aef312c2
      1800deef121f1e76426a00665e5c4479674322d4f75edadd46debd5cd992f6ed

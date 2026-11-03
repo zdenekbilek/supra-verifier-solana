@@ -2,7 +2,8 @@
 name = "supra-verifier-solana"
 version = "0.1.0"
 edition = "2021"
-description = "Independent Solana verification of Supra BTC/USD pull-oracle BLS and Merkle proofs"
+rust-version = "1.89"
+description = "Independent pair-bound Solana verification of Supra pull-oracle BLS and Merkle proofs"
 license = "MIT"
 repository = "https://github.com/zdenekbilek/supra-verifier-solana"
 documentation = "https://docs.rs/supra-verifier-solana"
@@ -10,7 +11,7 @@ readme = "README.md"
 keywords = ["solana", "supra", "oracle", "bls", "bn254"]
 categories = ["cryptography"]
 publish = ["crates-io"]
-include = ["/src/**", "/fixtures/**", "/Cargo.toml", "/Cargo.lock", "/README.md", "/LICENSE", "/NOTICE", "/CHANGELOG.md", "/docs/**"]
+include = ["/src/**", "/tests/**", "/fixtures/**", "/catalog/**", "/Cargo.toml", "/Cargo.lock", "/README.md", "/LICENSE", "/NOTICE", "/CHANGELOG.md", "/docs/**"]
 
 [workspace]
 members = ["examples/verify-proof"]

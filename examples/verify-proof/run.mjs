@@ -231,6 +231,8 @@ try {
         keys: options.keys ?? [],
         data: instructionData(
           proof,
+          options.expectedPair ?? 18,
+          options.expectedCommittee ?? 1n,
           expectedSecond,
           previous,
           options.witnesses,
@@ -314,6 +316,8 @@ try {
       name,
       passed: true,
       expectedError,
+      expectedPair: options.expectedPair ?? 18,
+      expectedCommittee: String(options.expectedCommittee ?? 1n),
       transactionBytes: bytes.length,
       computeUnits: landed.meta.computeUnitsConsumed,
       simulationComputeUnits: simulated.value.unitsConsumed,
@@ -325,7 +329,7 @@ try {
   const fixture = JSON.parse(
     readFileSync(path.join(directory, 'fixtures/btc-usd.json')),
   );
-  const compact = compactProof(fixture.proofHex);
+  const compact = compactProof(fixture.proofHex, 18);
   const fixtureSecond = Math.floor(Number(compact.readBigUInt64LE(28)) / 1000);
   const vectors = JSON.parse(
     readFileSync(path.join(directory, 'fixtures/vectors.json')),
@@ -337,6 +341,56 @@ try {
       `signed mapping vector ${index + 1}`,
       proof,
       Math.floor(vector.timestampMs / 1000),
+    );
+  }
+  const pairs = JSON.parse(
+    readFileSync(path.join(directory, 'fixtures/pairs.json')),
+  ).vectors;
+  for (const vector of pairs) {
+    const proof = Buffer.from(vector.compactHex, 'hex');
+    const second = Math.floor(vector.quote.publish_time_ms / 1000);
+    const options = {
+      expectedPair: vector.pair,
+      expectedCommittee: BigInt(vector.quote.committee_id),
+    };
+    await setTime((second + 4) * 1000);
+    await execute(
+      `original signed pair ${vector.pair} (${vector.symbol})`,
+      proof,
+      second,
+      0n,
+      null,
+      options,
+    );
+    await execute(
+      `valid pair ${vector.pair} cannot substitute another feed`,
+      proof,
+      second,
+      0n,
+      3,
+      { ...options, expectedPair: vector.pair === 0 ? 1 : 0 },
+    );
+    const altered = Buffer.from(proof);
+    const otherPair = vector.pair === 0 ? 1 : 0;
+    altered.writeUInt32LE(otherPair, 8);
+    await execute(
+      `mutated signed pair ${vector.pair} fails inclusion`,
+      altered,
+      second,
+      0n,
+      8,
+      { ...options, expectedPair: otherPair },
+    );
+    await execute(
+      `pair ${vector.pair} cannot choose another committee`,
+      proof,
+      second,
+      0n,
+      2,
+      {
+        ...options,
+        expectedCommittee: options.expectedCommittee === 0n ? 1n : 0n,
+      },
     );
   }
   await setTime(fixtureSecond * 1000 + 4000);
@@ -461,7 +515,7 @@ try {
 
   if (live) {
     // Explicit opt-in, one bounded request; no API key or environment file is loaded.
-    const selected = await fetchProof(abort.signal);
+    const selected = await fetchProof(18, abort.signal);
     const timestamp = Number(selected.compact.readBigUInt64LE(28));
     assert(
       timestamp <= Date.now() && Date.now() - timestamp <= 10_000,

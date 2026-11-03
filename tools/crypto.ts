@@ -112,6 +112,8 @@ export const CANONICAL_SUPRA_TRUST: SupraTrustBytes = {
   domain: hexToBytes(SUPRA_DOMAIN_HEX),
 };
 export interface SupraQuote {
+  pair_id: number;
+  decimals: number;
   price: string;
   expo: number;
   publish_time: number;
@@ -144,6 +146,11 @@ export function trustHashBytes(trust: SupraTrustBytes) {
   new DataView(id.buffer).setBigUint64(0, trust.committeeId, true);
   return hash(id, trust.publicKey, trust.domain);
 }
+/** Validate an explicitly selected on-wire u32 feed ID, including JS callers. */
+export function assertPairId(pair: number): void {
+  if (!Number.isInteger(pair) || pair < 0 || pair > 0xffffffff)
+    throw new Error('Expected an unsigned 32-bit pair ID');
+}
 export function decodeSupraQuoteBytes(compact: Uint8Array): SupraQuote {
   if (
     compact.length < 143 ||
@@ -156,8 +163,6 @@ export function decodeSupraQuoteBytes(compact: Uint8Array): SupraQuote {
     compact.byteOffset,
     compact.byteLength,
   );
-  if (view.getUint32(8, true) !== 18)
-    throw new Error('Expected BTC/USD pair 18');
   const price =
     view.getBigUint64(12, true) + (view.getBigUint64(20, true) << 64n);
   const milliseconds = view.getBigUint64(28, true),
@@ -169,6 +174,8 @@ export function decodeSupraQuoteBytes(compact: Uint8Array): SupraQuote {
   )
     throw new Error('Unsupported quote fields');
   return {
+    pair_id: view.getUint32(8, true),
+    decimals,
     price: price.toString(),
     expo: -decimals,
     publish_time: Math.floor(Number(milliseconds) / 1000),
@@ -179,10 +186,13 @@ export function decodeSupraQuoteBytes(compact: Uint8Array): SupraQuote {
 }
 export function verifySupraProofBytes(
   compact: Uint8Array,
+  expectedPair: number,
   trust: SupraTrustBytes = CANONICAL_SUPRA_TRUST,
 ): SupraQuote {
+  assertPairId(expectedPair);
   trustHashBytes(trust); // Validate trust widths even when no hash label is needed.
   const quote = decodeSupraQuoteBytes(compact);
+  if (quote.pair_id !== expectedPair) throw new Error('Unexpected proof pair');
   if (BigInt(quote.committee_id) !== trust.committeeId)
     throw new Error('Unknown oracle trust');
   let root = keccak_256(compact.subarray(8, 46));

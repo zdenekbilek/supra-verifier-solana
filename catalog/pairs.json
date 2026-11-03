@@ -1,0 +1,4557 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-11-03T16:00:39.325Z",
+  "source": "https://docs.supra.com/oracles/data-feeds/data-feeds-index",
+  "sourceSha256": "1cc129c37db649683480bc06c4283c0e4c230396764f232950ad9959f40c139b",
+  "pairs": [
+    {
+      "id": 0,
+      "symbol": "BTC_USDT",
+      "name": "BTC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 1,
+      "symbol": "ETH_USDT",
+      "name": "ETH_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 2,
+      "symbol": "LINK_USDT",
+      "name": "LINK_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 3,
+      "symbol": "DOGE_USDT",
+      "name": "DOGE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 4,
+      "symbol": "BCH_USDT",
+      "name": "BCH_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 5,
+      "symbol": "AVAX_USDT",
+      "name": "AVAX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 6,
+      "symbol": "DOT_USDT",
+      "name": "DOT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 7,
+      "symbol": "AAVE_USDT",
+      "name": "AAVE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 8,
+      "symbol": "UNI_USDT",
+      "name": "UNI_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 9,
+      "symbol": "LTC_USDT",
+      "name": "LTC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 10,
+      "symbol": "SOL_USDT",
+      "name": "SOL_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 11,
+      "symbol": "MKR_USDT",
+      "name": "MKR_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 12,
+      "symbol": "COMP_USDT",
+      "name": "COMP_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 13,
+      "symbol": "SUSHI_USDT",
+      "name": "SUSHI_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 14,
+      "symbol": "XRP_USDT",
+      "name": "XRP_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 15,
+      "symbol": "TRX_USDT",
+      "name": "TRX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 16,
+      "symbol": "ADA_USDT",
+      "name": "ADA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 17,
+      "symbol": "ATOM_USDT",
+      "name": "ATOM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 18,
+      "symbol": "BTC_USD",
+      "name": "BTC_USD",
+      "status": "standard"
+    },
+    {
+      "id": 19,
+      "symbol": "ETH_USD",
+      "name": "ETH_USD",
+      "status": "standard"
+    },
+    {
+      "id": 20,
+      "symbol": "MATIC_USDT",
+      "name": "MATIC_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 21,
+      "symbol": "BAT_USDT",
+      "name": "BAT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 22,
+      "symbol": "SNX_USDT",
+      "name": "SNX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 23,
+      "symbol": "YFI_USDT",
+      "name": "YFI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 24,
+      "symbol": "FIL_USDT",
+      "name": "FIL_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 25,
+      "symbol": "EOS_USDT",
+      "name": "EOS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 26,
+      "symbol": "ETC_USDT",
+      "name": "ETC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 27,
+      "symbol": "BCH_USD",
+      "name": "BCH_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 28,
+      "symbol": "MATIC_USD",
+      "name": "MATIC_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 29,
+      "symbol": "ALGO_USDT",
+      "name": "ALGO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 30,
+      "symbol": "ONT_USDT",
+      "name": "ONT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 31,
+      "symbol": "LINK_USD",
+      "name": "LINK_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 32,
+      "symbol": "AAVE_USD",
+      "name": "AAVE_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 33,
+      "symbol": "UNI_USD",
+      "name": "UNI_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 34,
+      "symbol": "SUSHI_USD",
+      "name": "SUSHI_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 35,
+      "symbol": "CRV_USDT",
+      "name": "CRV_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 36,
+      "symbol": "ENJ_USDT",
+      "name": "ENJ_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 37,
+      "symbol": "MANA_USDT",
+      "name": "MANA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 38,
+      "symbol": "XTZ_USDT",
+      "name": "XTZ_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 39,
+      "symbol": "OMG_USDT",
+      "name": "OMG_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 40,
+      "symbol": "REN_USDT",
+      "name": "REN_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 41,
+      "symbol": "DAI_USDT",
+      "name": "DAI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 42,
+      "symbol": "XLM_USDT",
+      "name": "XLM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 43,
+      "symbol": "RSR_USDT",
+      "name": "RSR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 44,
+      "symbol": "NEO_USDT",
+      "name": "NEO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 45,
+      "symbol": "BTC_USDC",
+      "name": "BTC_USDC",
+      "status": "premium"
+    },
+    {
+      "id": 46,
+      "symbol": "ETH_USDC",
+      "name": "ETH_USDC",
+      "status": "standard"
+    },
+    {
+      "id": 47,
+      "symbol": "USDC_USDT",
+      "name": "USDC_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 48,
+      "symbol": "USDT_USD",
+      "name": "USDT_USD",
+      "status": "premium"
+    },
+    {
+      "id": 49,
+      "symbol": "BNB_USDT",
+      "name": "BNB_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 50,
+      "symbol": "COMP_USD",
+      "name": "COMP_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 51,
+      "symbol": "ENJ_USD",
+      "name": "ENJ_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 52,
+      "symbol": "ZRX_USDT",
+      "name": "ZRX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 53,
+      "symbol": "LRC_USDT",
+      "name": "LRC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 54,
+      "symbol": "DAI_USD",
+      "name": "DAI_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 55,
+      "symbol": "KNC_USDT",
+      "name": "KNC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 56,
+      "symbol": "FTM_USDT",
+      "name": "FTM_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 57,
+      "symbol": "BAL_USDT",
+      "name": "BAL_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 58,
+      "symbol": "BAND_USDT",
+      "name": "BAND_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 59,
+      "symbol": "DASH_USDT",
+      "name": "DASH_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 60,
+      "symbol": "ZEC_USDT",
+      "name": "ZEC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 61,
+      "symbol": "RUNE_USDT",
+      "name": "RUNE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 62,
+      "symbol": "VET_USDT",
+      "name": "VET_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 63,
+      "symbol": "AVAX_USD",
+      "name": "AVAX_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 64,
+      "symbol": "LTC_USD",
+      "name": "LTC_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 65,
+      "symbol": "SOL_USD",
+      "name": "SOL_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 66,
+      "symbol": "DOT_USD",
+      "name": "DOT_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 67,
+      "symbol": "MKR_USD",
+      "name": "MKR_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 68,
+      "symbol": "BAT_USD",
+      "name": "BAT_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 69,
+      "symbol": "DOGE_USD",
+      "name": "DOGE_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 70,
+      "symbol": "XRP_USD",
+      "name": "XRP_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 71,
+      "symbol": "YFI_USD",
+      "name": "YFI_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 72,
+      "symbol": "ZRX_USD",
+      "name": "ZRX_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 73,
+      "symbol": "OXT_USDT",
+      "name": "OXT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 74,
+      "symbol": "UMA_USDT",
+      "name": "UMA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 75,
+      "symbol": "HBAR_USDT",
+      "name": "HBAR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 76,
+      "symbol": "SRM_USDT",
+      "name": "SRM_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 77,
+      "symbol": "SXP_USDT",
+      "name": "SXP_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 78,
+      "symbol": "KSM_USDT",
+      "name": "KSM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 79,
+      "symbol": "C98_USDT",
+      "name": "C98_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 80,
+      "symbol": "ARB_USDT",
+      "name": "ARB_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 81,
+      "symbol": "ARB_USD",
+      "name": "ARB_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 82,
+      "symbol": "FX_ETH",
+      "name": "FX_ETH",
+      "status": "deprecated"
+    },
+    {
+      "id": 83,
+      "symbol": "FX_USDT",
+      "name": "FX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 84,
+      "symbol": "FX_BTC",
+      "name": "FX_BTC",
+      "status": "deprecated"
+    },
+    {
+      "id": 85,
+      "symbol": "PUNDIX_USDT",
+      "name": "PUNDIX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 86,
+      "symbol": "PUNDIX_ETH",
+      "name": "PUNDIX_ETH",
+      "status": "deprecated"
+    },
+    {
+      "id": 87,
+      "symbol": "PUNDIX_BTC",
+      "name": "PUNDIX_BTC",
+      "status": "deprecated"
+    },
+    {
+      "id": 88,
+      "symbol": "FUSE_USDT",
+      "name": "FUSE_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 89,
+      "symbol": "USDC_USD",
+      "name": "USDC_USD",
+      "status": "premium"
+    },
+    {
+      "id": 90,
+      "symbol": "SUI_USDT",
+      "name": "SUI_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 91,
+      "symbol": "STG_USDT",
+      "name": "STG_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 92,
+      "symbol": "PEPE_USDT",
+      "name": "PEPE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 93,
+      "symbol": "CETUS_USDT",
+      "name": "CETUS_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 94,
+      "symbol": "SYS_USDT",
+      "name": "SYS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 95,
+      "symbol": "WETH_USH",
+      "name": "WETH_USH",
+      "status": "deprecated"
+    },
+    {
+      "id": 96,
+      "symbol": "svUSD_USDC",
+      "name": "svUSD_USDC",
+      "status": "deprecated"
+    },
+    {
+      "id": 97,
+      "symbol": "svBTC_WBTC",
+      "name": "svBTC_WBTC",
+      "status": "deprecated"
+    },
+    {
+      "id": 98,
+      "symbol": "svETH_WETH",
+      "name": "svETH_WETH",
+      "status": "deprecated"
+    },
+    {
+      "id": 99,
+      "symbol": "unshETH_USH",
+      "name": "unshETH_USH",
+      "status": "deprecated"
+    },
+    {
+      "id": 100,
+      "symbol": "SVY_WETH",
+      "name": "SVY_WETH",
+      "status": "deprecated"
+    },
+    {
+      "id": 101,
+      "symbol": "TURBOS_USDT",
+      "name": "TURBOS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 102,
+      "symbol": "SHIB_USDT",
+      "name": "SHIB_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 103,
+      "symbol": "APE_USDT",
+      "name": "APE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 104,
+      "symbol": "APT_USDT",
+      "name": "APT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 105,
+      "symbol": "DYDX_USDT",
+      "name": "DYDX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 106,
+      "symbol": "ICP_USDT",
+      "name": "ICP_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 107,
+      "symbol": "OP_USDT",
+      "name": "OP_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 108,
+      "symbol": "NEAR_USDT",
+      "name": "NEAR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 109,
+      "symbol": "AXS_USDT",
+      "name": "AXS_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 110,
+      "symbol": "IMX_USDT",
+      "name": "IMX_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 111,
+      "symbol": "SAND_USDT",
+      "name": "SAND_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 112,
+      "symbol": "RENDER_USDT",
+      "name": "RENDER_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 113,
+      "symbol": "BTT_USDT",
+      "name": "BTT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 114,
+      "symbol": "GALA_USDT",
+      "name": "GALA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 115,
+      "symbol": "ETH_BTC",
+      "name": "ETH_BTC",
+      "status": "premium"
+    },
+    {
+      "id": 116,
+      "symbol": "MINA_USDT",
+      "name": "MINA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 117,
+      "symbol": "FLOW_USDT",
+      "name": "FLOW_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 118,
+      "symbol": "RPL_USDT",
+      "name": "RPL_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 119,
+      "symbol": "QNT_USDT",
+      "name": "QNT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 120,
+      "symbol": "THETA_USDT",
+      "name": "THETA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 121,
+      "symbol": "INJ_USDT",
+      "name": "INJ_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 122,
+      "symbol": "KAVA_USDT",
+      "name": "KAVA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 123,
+      "symbol": "KLAY_USDT",
+      "name": "KLAY_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 124,
+      "symbol": "NEXO_USDT",
+      "name": "NEXO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 125,
+      "symbol": "CAKE_USDT",
+      "name": "CAKE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 126,
+      "symbol": "CFX_USDT",
+      "name": "CFX_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 127,
+      "symbol": "CSPR_USDT",
+      "name": "CSPR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 128,
+      "symbol": "FXS_USDT",
+      "name": "FXS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 129,
+      "symbol": "CHZ_USDT",
+      "name": "CHZ_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 130,
+      "symbol": "WLD_USDT",
+      "name": "WLD_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 131,
+      "symbol": "AR_USDT",
+      "name": "AR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 132,
+      "symbol": "ZBC_USDT",
+      "name": "ZBC_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 133,
+      "symbol": "AURORA_USDT",
+      "name": "AURORA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 134,
+      "symbol": "IOTX_USDT",
+      "name": "IOTX_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 135,
+      "symbol": "CRO_USDT",
+      "name": "CRO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 136,
+      "symbol": "MNT_USDT",
+      "name": "MNT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 137,
+      "symbol": "GLMR_USDT",
+      "name": "GLMR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 138,
+      "symbol": "ASTR_USDT",
+      "name": "ASTR_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 139,
+      "symbol": "TOMO_USDT",
+      "name": "TOMO_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 140,
+      "symbol": "FLR_USDT",
+      "name": "FLR_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 141,
+      "symbol": "KDA_USDT",
+      "name": "KDA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 142,
+      "symbol": "CELO_USDT",
+      "name": "CELO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 143,
+      "symbol": "1INCH_USDT",
+      "name": "1INCH_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 144,
+      "symbol": "ANKR_USDT",
+      "name": "ANKR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 145,
+      "symbol": "JST_USDT",
+      "name": "JST_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 146,
+      "symbol": "JOE_USDT",
+      "name": "JOE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 147,
+      "symbol": "TUSD_USDT",
+      "name": "TUSD_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 148,
+      "symbol": "OKB_USDT",
+      "name": "OKB_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 149,
+      "symbol": "stETH_USDT",
+      "name": "stETH_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 150,
+      "symbol": "XDC_USDT",
+      "name": "XDC_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 151,
+      "symbol": "xcvDOT_xcDOT",
+      "name": "xcvDOT_xcDOT",
+      "status": "deprecated"
+    },
+    {
+      "id": 152,
+      "symbol": "ADA_USD",
+      "name": "ADA_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 153,
+      "symbol": "MELD_USDT",
+      "name": "MELD_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 154,
+      "symbol": "xcvGLMR_WGLMR",
+      "name": "xcvGLMR_WGLMR",
+      "status": "deprecated"
+    },
+    {
+      "id": 155,
+      "symbol": "CETUS_SUI",
+      "name": "CETUS_SUI",
+      "status": "deprecated"
+    },
+    {
+      "id": 156,
+      "symbol": "TURBOS_SUI",
+      "name": "TURBOS_SUI",
+      "status": "deprecated"
+    },
+    {
+      "id": 157,
+      "symbol": "afSUI_SUI",
+      "name": "afSUI_SUI",
+      "status": "deprecated"
+    },
+    {
+      "id": 158,
+      "symbol": "haSUI_SUI",
+      "name": "haSUI_SUI",
+      "status": "under-supervision"
+    },
+    {
+      "id": 159,
+      "symbol": "vSUI_SUI",
+      "name": "vSUI_SUI",
+      "status": "under-supervision"
+    },
+    {
+      "id": 160,
+      "symbol": "SUI_BUCK",
+      "name": "SUI_BUCK",
+      "status": "deprecated"
+    },
+    {
+      "id": 161,
+      "symbol": "USDC_BUCK",
+      "name": "USDC_BUCK",
+      "status": "under-supervision"
+    },
+    {
+      "id": 162,
+      "symbol": "XEM_USDT",
+      "name": "XEM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 163,
+      "symbol": "GRT_USDT",
+      "name": "GRT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 164,
+      "symbol": "TON_USDT",
+      "name": "TON_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 165,
+      "symbol": "KAS_USDT",
+      "name": "KAS_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 166,
+      "symbol": "wBTC_USDT",
+      "name": "wBTC_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 167,
+      "symbol": "STX_USDT",
+      "name": "STX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 168,
+      "symbol": "EGLD_USDT",
+      "name": "EGLD_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 169,
+      "symbol": "PAXG_USDT",
+      "name": "PAXG_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 170,
+      "symbol": "HT_USDT",
+      "name": "HT_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 171,
+      "symbol": "IOTA_USDT",
+      "name": "IOTA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 172,
+      "symbol": "USDY_USDC",
+      "name": "USDY_USDC",
+      "status": "under-supervision"
+    },
+    {
+      "id": 173,
+      "symbol": "TWT_USDT",
+      "name": "TWT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 174,
+      "symbol": "ALPACA_USDT",
+      "name": "ALPACA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 175,
+      "symbol": "AKT_USDT",
+      "name": "AKT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 176,
+      "symbol": "HNT_USDT",
+      "name": "HNT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 177,
+      "symbol": "BLUR_USDT",
+      "name": "BLUR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 178,
+      "symbol": "BNX_USDT",
+      "name": "BNX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 179,
+      "symbol": "BSV_USDT",
+      "name": "BSV_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 180,
+      "symbol": "BSW_USDT",
+      "name": "BSW_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 181,
+      "symbol": "CELR_USDT",
+      "name": "CELR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 182,
+      "symbol": "CVX_USDT",
+      "name": "CVX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 183,
+      "symbol": "PYTH_USDT",
+      "name": "PYTH_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 184,
+      "symbol": "KLUB_USDT",
+      "name": "KLUB_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 185,
+      "symbol": "USDY_USD",
+      "name": "USDY_USD (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 186,
+      "symbol": "CHAPZ_USDT",
+      "name": "CHAPZ_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 187,
+      "symbol": "ENS_USDT",
+      "name": "ENS_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 188,
+      "symbol": "GMT_USDT",
+      "name": "GMT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 189,
+      "symbol": "GMX_USDT",
+      "name": "GMX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 190,
+      "symbol": "GNO_USDT",
+      "name": "GNO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 191,
+      "symbol": "FET_USDT",
+      "name": "FET_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 192,
+      "symbol": "FLOKI_USDT",
+      "name": "FLOKI_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 193,
+      "symbol": "GAL_USDT",
+      "name": "GAL_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 194,
+      "symbol": "PYUSD_USDT",
+      "name": "PYUSD_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 195,
+      "symbol": "XMR_USDT",
+      "name": "XMR_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 196,
+      "symbol": "ZIL_USDT",
+      "name": "ZIL_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 197,
+      "symbol": "POL_USDT",
+      "name": "POL_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 198,
+      "symbol": "FINC_USDT",
+      "name": "FINC_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 199,
+      "symbol": "BONK_USDT",
+      "name": "BONK_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 200,
+      "symbol": "FUD_SUI",
+      "name": "FUD_SUI",
+      "status": "deprecated"
+    },
+    {
+      "id": 201,
+      "symbol": "DAO_USDT",
+      "name": "DAO_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 202,
+      "symbol": "ELON_USDT",
+      "name": "ELON_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 203,
+      "symbol": "TOSHI_WETH",
+      "name": "TOSHI_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 204,
+      "symbol": "MOCHI_WETH",
+      "name": "MOCHI_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 205,
+      "symbol": "TIA_USDT",
+      "name": "TIA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 206,
+      "symbol": "PENDLE_USDT",
+      "name": "PENDLE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 207,
+      "symbol": "NTRN_USDT",
+      "name": "NTRN_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 208,
+      "symbol": "SEI_USDT",
+      "name": "SEI_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 209,
+      "symbol": "ORDI_USDT",
+      "name": "ORDI_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 210,
+      "symbol": "mevETH_WETH",
+      "name": "mevETH_WETH",
+      "status": "deprecated"
+    },
+    {
+      "id": 211,
+      "symbol": "WETH_USDT",
+      "name": "WETH_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 212,
+      "symbol": "JTO_USDT",
+      "name": "JTO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 213,
+      "symbol": "RIO_USDT",
+      "name": "RIO_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 214,
+      "symbol": "OSMO_USDT",
+      "name": "OSMO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 215,
+      "symbol": "AXL_USDT",
+      "name": "AXL_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 216,
+      "symbol": "AGIX_USDT",
+      "name": "AGIX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 217,
+      "symbol": "SC_USDT",
+      "name": "SC_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 218,
+      "symbol": "QTUM_USDT",
+      "name": "QTUM_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 219,
+      "symbol": "USDP_USDT",
+      "name": "USDP_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 220,
+      "symbol": "METIS_USDT",
+      "name": "METIS_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 221,
+      "symbol": "ANT_USDT",
+      "name": "ANT_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 222,
+      "symbol": "ICX_USDT",
+      "name": "ICX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 223,
+      "symbol": "GLM_USDT",
+      "name": "GLM_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 224,
+      "symbol": "T_USDT",
+      "name": "T_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 225,
+      "symbol": "WAXP_USDT",
+      "name": "WAXP_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 226,
+      "symbol": "BICO_USDT",
+      "name": "BICO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 227,
+      "symbol": "ACE_USDT",
+      "name": "ACE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 228,
+      "symbol": "FLUX_USDT",
+      "name": "FLUX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 229,
+      "symbol": "SFUND_USDT",
+      "name": "SFUND_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 230,
+      "symbol": "DESO_USDT",
+      "name": "DESO_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 231,
+      "symbol": "SKL_USDT",
+      "name": "SKL_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 232,
+      "symbol": "ILV_USDT",
+      "name": "ILV_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 233,
+      "symbol": "MOBILE_USDT",
+      "name": "MOBILE_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 234,
+      "symbol": "WAVES_USDT",
+      "name": "WAVES_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 235,
+      "symbol": "SUPER_USDT",
+      "name": "SUPER_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 236,
+      "symbol": "TFUEL_USDT",
+      "name": "TFUEL_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 237,
+      "symbol": "OCEAN_USDT",
+      "name": "OCEAN_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 238,
+      "symbol": "AUDIO_USDT",
+      "name": "AUDIO_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 239,
+      "symbol": "MASK_USDT",
+      "name": "MASK_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 240,
+      "symbol": "DCR_USDT",
+      "name": "DCR_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 241,
+      "symbol": "RVN_USDT",
+      "name": "RVN_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 242,
+      "symbol": "MAGIC_USDT",
+      "name": "MAGIC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 243,
+      "symbol": "STORJ_USDT",
+      "name": "STORJ_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 244,
+      "symbol": "MX_USDT",
+      "name": "MX_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 245,
+      "symbol": "SSV_USDT",
+      "name": "SSV_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 246,
+      "symbol": "ONE_USDT",
+      "name": "ONE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 247,
+      "symbol": "XCH_USDT",
+      "name": "XCH_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 248,
+      "symbol": "SFP_USDT",
+      "name": "SFP_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 249,
+      "symbol": "RAY_USDT",
+      "name": "RAY_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 250,
+      "symbol": "XAUT_USDT",
+      "name": "XAUT_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 251,
+      "symbol": "mevETH_ETH",
+      "name": "mevETH_ETH (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 252,
+      "symbol": "MINU_WMNT",
+      "name": "MINU_WMNT",
+      "status": "deprecated"
+    },
+    {
+      "id": 253,
+      "symbol": "RLB_WETH",
+      "name": "RLB_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 254,
+      "symbol": "FRAX_USDC",
+      "name": "FRAX_USDC",
+      "status": "under-supervision"
+    },
+    {
+      "id": 255,
+      "symbol": "CRVUSD_USDT",
+      "name": "CRVUSD_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 256,
+      "symbol": "mETH_WETH",
+      "name": "mETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 257,
+      "symbol": "WMNT_USDT",
+      "name": "WMNT_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 258,
+      "symbol": "uniETH_WETH",
+      "name": "uniETH_WETH",
+      "status": "deprecated"
+    },
+    {
+      "id": 259,
+      "symbol": "CORE_USDT",
+      "name": "CORE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 260,
+      "symbol": "GAS_USDT",
+      "name": "GAS_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 261,
+      "symbol": "HOT_USDT",
+      "name": "HOT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 262,
+      "symbol": "NFT_USDT",
+      "name": "NFT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 263,
+      "symbol": "ELF_USDT",
+      "name": "ELF_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 264,
+      "symbol": "WOO_USDT",
+      "name": "WOO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 265,
+      "symbol": "XEC_USDT",
+      "name": "XEC_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 266,
+      "symbol": "TRB_USDT",
+      "name": "TRB_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 267,
+      "symbol": "USDD_USDT",
+      "name": "USDD_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 268,
+      "symbol": "LDO_USDT",
+      "name": "LDO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 269,
+      "symbol": "ROSE_USDT",
+      "name": "ROSE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 270,
+      "symbol": "WEMIX_USDT",
+      "name": "WEMIX_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 271,
+      "symbol": "BEAM_USDT",
+      "name": "BEAM_USDT",
+      "status": "coming-soon"
+    },
+    {
+      "id": 272,
+      "symbol": "BIFI_USDT",
+      "name": "BIFI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 273,
+      "symbol": "AI_USDT",
+      "name": "AI_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 274,
+      "symbol": "MAV_USDT",
+      "name": "MAV_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 275,
+      "symbol": "PEOPLE_USDT",
+      "name": "PEOPLE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 276,
+      "symbol": "XRD_USDT",
+      "name": "XRD_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 277,
+      "symbol": "IDEX_USDT",
+      "name": "IDEX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 278,
+      "symbol": "LEO_USDT",
+      "name": "LEO_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 279,
+      "symbol": "LUNA_USDT",
+      "name": "LUNA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 280,
+      "symbol": "MBOX_USDT",
+      "name": "MBOX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 281,
+      "symbol": "TIFI_WBNB",
+      "name": "TIFI_WBNB",
+      "status": "deprecated"
+    },
+    {
+      "id": 282,
+      "symbol": "WBNB_BUSD",
+      "name": "WBNB_BUSD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 283,
+      "symbol": "RATS_USDT",
+      "name": "RATS_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 284,
+      "symbol": "INTER_USDT",
+      "name": "INTER_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 285,
+      "symbol": "PERP_USDT",
+      "name": "PERP_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 286,
+      "symbol": "LAZIO_USDT",
+      "name": "LAZIO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 287,
+      "symbol": "SLP_USDT",
+      "name": "SLP_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 288,
+      "symbol": "XAI_USDT",
+      "name": "XAI_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 289,
+      "symbol": "SMR_USDT",
+      "name": "SMR_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 290,
+      "symbol": "wstETH_WETH",
+      "name": "wstETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 291,
+      "symbol": "rETH_WETH",
+      "name": "rETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 292,
+      "symbol": "SANTOS_USDT",
+      "name": "SANTOS_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 293,
+      "symbol": "RDNT_USDT",
+      "name": "RDNT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 294,
+      "symbol": "TIFI_USDT",
+      "name": "TIFI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 295,
+      "symbol": "VLX_USDT",
+      "name": "VLX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 296,
+      "symbol": "NEON_USDT",
+      "name": "NEON_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 297,
+      "symbol": "SPA_USDT",
+      "name": "SPA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 298,
+      "symbol": "NRK_USDT",
+      "name": "NRK_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 299,
+      "symbol": "mETH_ETH",
+      "name": "mETH_ETH (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 300,
+      "symbol": "MANTA_USDT",
+      "name": "MANTA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 301,
+      "symbol": "ONDO_USDT",
+      "name": "ONDO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 302,
+      "symbol": "LQTY_USDT",
+      "name": "LQTY_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 303,
+      "symbol": "ACX_USDT",
+      "name": "ACX_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 304,
+      "symbol": "SAVM_USDT",
+      "name": "SAVM_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 305,
+      "symbol": "USDT_BUSD",
+      "name": "USDT_BUSD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 306,
+      "symbol": "JASMY_USDT",
+      "name": "JASMY_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 307,
+      "symbol": "PRIME_USDT",
+      "name": "PRIME_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 308,
+      "symbol": "SAMO_USDT",
+      "name": "SAMO_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 309,
+      "symbol": "MOVR_USDT",
+      "name": "MOVR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 310,
+      "symbol": "LPT_USDT",
+      "name": "LPT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 311,
+      "symbol": "TAO_USDT",
+      "name": "TAO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 312,
+      "symbol": "CHEEL_USDT",
+      "name": "CHEEL_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 313,
+      "symbol": "FTN_USDT",
+      "name": "FTN_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 314,
+      "symbol": "POKT_USDT",
+      "name": "POKT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 315,
+      "symbol": "RBN_USDT",
+      "name": "RBN_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 316,
+      "symbol": "AZERO_USDT",
+      "name": "AZERO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 317,
+      "symbol": "LSD_USDT",
+      "name": "LSD_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 318,
+      "symbol": "CANTO_USDT",
+      "name": "CANTO_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 319,
+      "symbol": "MYRO_USDT",
+      "name": "MYRO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 320,
+      "symbol": "API3_USDT",
+      "name": "API3_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 321,
+      "symbol": "FNSA_USDT",
+      "name": "FNSA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 322,
+      "symbol": "OAS_USDT",
+      "name": "OAS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 323,
+      "symbol": "XVS_USDT",
+      "name": "XVS_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 324,
+      "symbol": "FUD_USDC",
+      "name": "FUD_USDC",
+      "status": "deprecated"
+    },
+    {
+      "id": 325,
+      "symbol": "wstETH_stETH",
+      "name": "wstETH_stETH (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 326,
+      "symbol": "uniETH_ETH",
+      "name": "uniETH_ETH (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 327,
+      "symbol": "STONE_WETH",
+      "name": "STONE_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 328,
+      "symbol": "STONE_USDC",
+      "name": "STONE_USDC",
+      "status": "under-supervision"
+    },
+    {
+      "id": 329,
+      "symbol": "wUSDM_USDC",
+      "name": "wUSDM_USDC",
+      "status": "deprecated"
+    },
+    {
+      "id": 330,
+      "symbol": "ALT_USDT",
+      "name": "ALT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 331,
+      "symbol": "KARATE_USDT",
+      "name": "KARATE_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 332,
+      "symbol": "AERGO_USDT",
+      "name": "AERGO_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 333,
+      "symbol": "ORCA_USDT",
+      "name": "ORCA_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 334,
+      "symbol": "LYX_USDT",
+      "name": "LYX_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 335,
+      "symbol": "BDX_USDT",
+      "name": "BDX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 336,
+      "symbol": "RLB_USDT",
+      "name": "RLB_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 337,
+      "symbol": "MEME_USDT",
+      "name": "MEME_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 338,
+      "symbol": "RACA_USDT",
+      "name": "RACA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 339,
+      "symbol": "WOJAK_USDT",
+      "name": "WOJAK_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 340,
+      "symbol": "LSK_USDT",
+      "name": "LSK_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 341,
+      "symbol": "AMP_USDT",
+      "name": "AMP_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 342,
+      "symbol": "CHR_USDT",
+      "name": "CHR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 343,
+      "symbol": "DORA_USDT",
+      "name": "DORA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 344,
+      "symbol": "AUCTION_USDT",
+      "name": "AUCTION_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 345,
+      "symbol": "RLC_USDT",
+      "name": "RLC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 346,
+      "symbol": "DEXE_USDT",
+      "name": "DEXE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 347,
+      "symbol": "GEL_USDT",
+      "name": "GEL_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 348,
+      "symbol": "OMI_USDT",
+      "name": "OMI_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 349,
+      "symbol": "ALEX_USDT",
+      "name": "ALEX_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 350,
+      "symbol": "CTSI_USDT",
+      "name": "CTSI_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 351,
+      "symbol": "VTHO_USDT",
+      "name": "VTHO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 352,
+      "symbol": "POLYX_USDT",
+      "name": "POLYX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 353,
+      "symbol": "CTC_USDT",
+      "name": "CTC_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 354,
+      "symbol": "IOST_USDT",
+      "name": "IOST_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 355,
+      "symbol": "GNS_USDT",
+      "name": "GNS_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 356,
+      "symbol": "EDU_USDT",
+      "name": "EDU_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 357,
+      "symbol": "ULTIMA_USDT",
+      "name": "ULTIMA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 358,
+      "symbol": "VR_USDT",
+      "name": "VR_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 359,
+      "symbol": "LOOKS_USDT",
+      "name": "LOOKS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 360,
+      "symbol": "VV_USDT",
+      "name": "VV_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 361,
+      "symbol": "JUP_USDT",
+      "name": "JUP_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 362,
+      "symbol": "CDX_USDT",
+      "name": "CDX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 363,
+      "symbol": "DIA_USDT",
+      "name": "DIA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 364,
+      "symbol": "XNO_USDT",
+      "name": "XNO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 365,
+      "symbol": "ORBS_USDT",
+      "name": "ORBS_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 366,
+      "symbol": "AIOZ_USDT",
+      "name": "AIOZ_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 367,
+      "symbol": "SYN_USDT",
+      "name": "SYN_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 368,
+      "symbol": "BORA_USDT",
+      "name": "BORA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 369,
+      "symbol": "ALPH_USDT",
+      "name": "ALPH_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 370,
+      "symbol": "BNB_USDC",
+      "name": "BNB_USDC",
+      "status": "premium"
+    },
+    {
+      "id": 371,
+      "symbol": "SUI_USDC",
+      "name": "SUI_USDC",
+      "status": "premium"
+    },
+    {
+      "id": 372,
+      "symbol": "DUSK_USDT",
+      "name": "DUSK_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 373,
+      "symbol": "TRAC_USDT",
+      "name": "TRAC_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 374,
+      "symbol": "POND_USDT",
+      "name": "POND_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 375,
+      "symbol": "TET_USDT",
+      "name": "TET_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 376,
+      "symbol": "SGB_USDT",
+      "name": "SGB_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 377,
+      "symbol": "SXP_USDT",
+      "name": "SXP_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 378,
+      "symbol": "NMR_USDT",
+      "name": "NMR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 379,
+      "symbol": "POWR_USDT",
+      "name": "POWR_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 380,
+      "symbol": "BLZ_USDT",
+      "name": "BLZ_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 381,
+      "symbol": "PYR_USDT",
+      "name": "PYR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 382,
+      "symbol": "CQT_USDT",
+      "name": "CQT_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 383,
+      "symbol": "NYM_USDT",
+      "name": "NYM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 384,
+      "symbol": "TRIAS_USDT",
+      "name": "TRIAS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 385,
+      "symbol": "RIF_USDT",
+      "name": "RIF_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 386,
+      "symbol": "HIVE_USDT",
+      "name": "HIVE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 387,
+      "symbol": "YGG_USDT",
+      "name": "YGG_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 388,
+      "symbol": "OM_USDT",
+      "name": "OM_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 389,
+      "symbol": "ZEN_USDT",
+      "name": "ZEN_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 390,
+      "symbol": "DGB_USDT",
+      "name": "DGB_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 391,
+      "symbol": "ID_USDT",
+      "name": "ID_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 392,
+      "symbol": "PROM_USDT",
+      "name": "PROM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 393,
+      "symbol": "EVER_USDT",
+      "name": "EVER_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 394,
+      "symbol": "CTXC_USDT",
+      "name": "CTXC_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 395,
+      "symbol": "ONG_USDT",
+      "name": "ONG_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 396,
+      "symbol": "DKA_USDT",
+      "name": "DKA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 397,
+      "symbol": "MUBI_USDT",
+      "name": "MUBI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 398,
+      "symbol": "DFI_USDT",
+      "name": "DFI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 399,
+      "symbol": "GOG_USDT",
+      "name": "GOG_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 400,
+      "symbol": "HOOK_USDT",
+      "name": "HOOK_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 401,
+      "symbol": "LOOM_USDT",
+      "name": "LOOM_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 402,
+      "symbol": "GAFI_USDT",
+      "name": "GAFI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 403,
+      "symbol": "HFT_USDT",
+      "name": "HFT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 404,
+      "symbol": "PLA_USDT",
+      "name": "PLA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 405,
+      "symbol": "STPT_USDT",
+      "name": "STPT_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 406,
+      "symbol": "ARKM_USDT",
+      "name": "ARKM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 407,
+      "symbol": "SCRT_USDT",
+      "name": "SCRT_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 408,
+      "symbol": "NAVX_USDT",
+      "name": "NAVX_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 409,
+      "symbol": "svUSD_FRAX",
+      "name": "svUSD_FRAX",
+      "status": "deprecated"
+    },
+    {
+      "id": 410,
+      "symbol": "DYM_USDT",
+      "name": "DYM_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 411,
+      "symbol": "SOL_USDC",
+      "name": "SOL_USDC",
+      "status": "premium"
+    },
+    {
+      "id": 412,
+      "symbol": "AVAX_USDC",
+      "name": "AVAX_USDC",
+      "status": "standard"
+    },
+    {
+      "id": 413,
+      "symbol": "MATIC_USDC",
+      "name": "MATIC_USDC",
+      "status": "deprecated"
+    },
+    {
+      "id": 414,
+      "symbol": "OP_USDC",
+      "name": "OP_USDC",
+      "status": "deprecated"
+    },
+    {
+      "id": 415,
+      "symbol": "COTI_USDT",
+      "name": "COTI_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 416,
+      "symbol": "XAVA_USDT",
+      "name": "XAVA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 417,
+      "symbol": "SHRAP_USDT",
+      "name": "SHRAP_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 418,
+      "symbol": "EWT_USDT",
+      "name": "EWT_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 419,
+      "symbol": "FLIP_USDT",
+      "name": "FLIP_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 420,
+      "symbol": "STEEM_USDT",
+      "name": "STEEM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 421,
+      "symbol": "TOMI_USDT",
+      "name": "TOMI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 422,
+      "symbol": "CLY_wAVAX",
+      "name": "CLY_wAVAX",
+      "status": "under-supervision"
+    },
+    {
+      "id": 423,
+      "symbol": "LOCK_wETH",
+      "name": "LOCK_wETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 424,
+      "symbol": "CLXY_wHBAR",
+      "name": "CLXY_wHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 425,
+      "symbol": "SAUCE_wHBAR",
+      "name": "SAUCE_wHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 426,
+      "symbol": "xSAUCE_wHBAR",
+      "name": "xSAUCE_wHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 427,
+      "symbol": "HBARX_wHBAR",
+      "name": "HBARX_wHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 428,
+      "symbol": "HST_wHBAR",
+      "name": "HST_wHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 429,
+      "symbol": "DOVU_wHBAR",
+      "name": "DOVU_wHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 430,
+      "symbol": "HELI_wHBAR",
+      "name": "HELI_wHBAR",
+      "status": "deprecated"
+    },
+    {
+      "id": 431,
+      "symbol": "JAM_wHBAR",
+      "name": "JAM_wHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 432,
+      "symbol": "HBAR_USD",
+      "name": "HBAR_USD",
+      "status": "standard"
+    },
+    {
+      "id": 433,
+      "symbol": "wUSDM_USDM",
+      "name": "wUSDM_USDM (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 434,
+      "symbol": "hSUI_SUI",
+      "name": "hSUI_SUI",
+      "status": "deprecated"
+    },
+    {
+      "id": 435,
+      "symbol": "LAB.m_WETH",
+      "name": "LAB.m_WETH",
+      "status": "deprecated"
+    },
+    {
+      "id": 436,
+      "symbol": "wstETH_USDC",
+      "name": "wstETH_USDC",
+      "status": "under-supervision"
+    },
+    {
+      "id": 437,
+      "symbol": "VIA_USDT",
+      "name": "VIA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 438,
+      "symbol": "STRK_USDT",
+      "name": "STRK_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 439,
+      "symbol": "PIXEL_USDT",
+      "name": "PIXEL_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 440,
+      "symbol": "vASTR_WASTR",
+      "name": "vASTR_WASTR",
+      "status": "deprecated"
+    },
+    {
+      "id": 441,
+      "symbol": "AGI_USDT",
+      "name": "AGI_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 442,
+      "symbol": "WIF_USDT",
+      "name": "WIF_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 443,
+      "symbol": "weETH_WETH",
+      "name": "weETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 444,
+      "symbol": "SATS_USDT",
+      "name": "SATS_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 445,
+      "symbol": "TRAC_USDT",
+      "name": "TRAC_USDT (BRC20)",
+      "status": "deprecated"
+    },
+    {
+      "id": 446,
+      "symbol": "DOVI_USDT",
+      "name": "DOVI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 447,
+      "symbol": "NALS_USDT",
+      "name": "NALS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 448,
+      "symbol": "MMSS_USDT",
+      "name": "MMSS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 449,
+      "symbol": "VMPX_USDT",
+      "name": "VMPX_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 450,
+      "symbol": "MAPO_USDT",
+      "name": "MAPO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 451,
+      "symbol": "CGO_USDT",
+      "name": "CGO_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 452,
+      "symbol": "DEGEN_WETH",
+      "name": "DEGEN_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 453,
+      "symbol": "TYBG_WETH",
+      "name": "TYBG_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 454,
+      "symbol": "sDAI_USDC",
+      "name": "sDAI_USDC",
+      "status": "deprecated"
+    },
+    {
+      "id": 455,
+      "symbol": "vASTR_ASTR",
+      "name": "vASTR_ASTR (Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 456,
+      "symbol": "STONE_ETH",
+      "name": "STONE_ETH (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 457,
+      "symbol": "sfrxETH_ETH",
+      "name": "sfrxETH_ETH (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 458,
+      "symbol": "COPI_USDT",
+      "name": "COPI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 459,
+      "symbol": "WEN_USDT",
+      "name": "WEN_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 460,
+      "symbol": "PUPS_USDT",
+      "name": "PUPS_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 461,
+      "symbol": "USDE_USDT",
+      "name": "USDE_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 462,
+      "symbol": "DEGEN_USDT",
+      "name": "DEGEN_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 463,
+      "symbol": "W_USDT",
+      "name": "W_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 464,
+      "symbol": "AEVO_USDT",
+      "name": "AEVO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 465,
+      "symbol": "ENA_USDT",
+      "name": "ENA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 466,
+      "symbol": "ETHFI_USDT",
+      "name": "ETHFI_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 467,
+      "symbol": "pxETH_WETH",
+      "name": "pxETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 468,
+      "symbol": "rsETH_WETH",
+      "name": "rsETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 469,
+      "symbol": "ezETH_WETH",
+      "name": "ezETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 470,
+      "symbol": "eETH_WETH",
+      "name": "eETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 471,
+      "symbol": "rswETH_WETH",
+      "name": "rswETH_WETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 472,
+      "symbol": "KARATE_WHBAR",
+      "name": "KARATE_WHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 473,
+      "symbol": "TAIKO_USDT",
+      "name": "TAIKO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 474,
+      "symbol": "FDUSD_USDT",
+      "name": "FDUSD_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 475,
+      "symbol": "WINR_USDC",
+      "name": "WINR_USDC",
+      "status": "under-supervision"
+    },
+    {
+      "id": 476,
+      "symbol": "SCA_USDT",
+      "name": "SCA_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 477,
+      "symbol": "VANRY_USDT",
+      "name": "VANRY_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 478,
+      "symbol": "PACK_WHBAR",
+      "name": "PACK_WHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 479,
+      "symbol": "STEAM_WHBAR",
+      "name": "STEAM_WHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 480,
+      "symbol": "MELD_WETH",
+      "name": "MELD_WETH",
+      "status": "deprecated"
+    },
+    {
+      "id": 481,
+      "symbol": "BOME_USDT",
+      "name": "BOME_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 482,
+      "symbol": "DODO_USDT",
+      "name": "DODO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 483,
+      "symbol": "NOT_USDT",
+      "name": "NOT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 484,
+      "symbol": "TNSR_USDT",
+      "name": "TNSR_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 485,
+      "symbol": "ZK_USDT",
+      "name": "ZK_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 486,
+      "symbol": "ZRO_USDT",
+      "name": "ZRO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 487,
+      "symbol": "IO_USDT",
+      "name": "IO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 488,
+      "symbol": "HSUITE_WHBAR",
+      "name": "HSUITE_WHBAR",
+      "status": "deprecated"
+    },
+    {
+      "id": 489,
+      "symbol": "AEG_USDT",
+      "name": "AEG_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 490,
+      "symbol": "AUSD_USDC",
+      "name": "AUSD_USDC",
+      "status": "under-supervision"
+    },
+    {
+      "id": 491,
+      "symbol": "DEEP_USDT",
+      "name": "DEEP_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 492,
+      "symbol": "SCR_USDT",
+      "name": "SCR_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 493,
+      "symbol": "GOAT_USDT",
+      "name": "GOAT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 494,
+      "symbol": "EIGEN_USDT",
+      "name": "EIGEN_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 495,
+      "symbol": "yUSD_USDT",
+      "name": "yUSD_USDT (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 496,
+      "symbol": "TURBO_USDT",
+      "name": "TURBO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 497,
+      "symbol": "MOODENG_USDT",
+      "name": "MOODENG_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 498,
+      "symbol": "CHILLGUY_USDT",
+      "name": "CHILLGUY_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 499,
+      "symbol": "NEIRO_USDT",
+      "name": "NEIRO_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 500,
+      "symbol": "SUPRA_USDT",
+      "name": "SUPRA_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 501,
+      "symbol": "MOG_USDT",
+      "name": "MOG_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 502,
+      "symbol": "PNUT_USDT",
+      "name": "PNUT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 503,
+      "symbol": "POPCAT_USDT",
+      "name": "POPCAT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 504,
+      "symbol": "BRETT_USDT",
+      "name": "BRETT_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 505,
+      "symbol": "wHBAR_USDC",
+      "name": "wHBAR_USDC",
+      "status": "under-supervision"
+    },
+    {
+      "id": 506,
+      "symbol": "MOVE_USDT",
+      "name": "MOVE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 507,
+      "symbol": "pUSD_USDC",
+      "name": "pUSD_USDC",
+      "status": "deprecated"
+    },
+    {
+      "id": 508,
+      "symbol": "BLUE_USDT",
+      "name": "BLUE_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 509,
+      "symbol": "nRWA_PUSD",
+      "name": "nRWA_PUSD",
+      "status": "deprecated"
+    },
+    {
+      "id": 510,
+      "symbol": "sBTC_BTC",
+      "name": "sBTC_BTC",
+      "status": "premium"
+    },
+    {
+      "id": 511,
+      "symbol": "nYIELD_PUSD",
+      "name": "nYIELD_PUSD",
+      "status": "deprecated"
+    },
+    {
+      "id": 512,
+      "symbol": "nTBILL_PUSD",
+      "name": "nTBILL_PUSD",
+      "status": "deprecated"
+    },
+    {
+      "id": 513,
+      "symbol": "xPACK_PACK",
+      "name": "xPACK_PACK",
+      "status": "under-supervision"
+    },
+    {
+      "id": 514,
+      "symbol": "JOC_USDT",
+      "name": "JOC_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 515,
+      "symbol": "TRUMP_USDT",
+      "name": "TRUMP_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 516,
+      "symbol": "MELANIA_USDT",
+      "name": "MELANIA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 517,
+      "symbol": "HSK_USDT",
+      "name": "HSK_USDT",
+      "status": "under-supervision"
+    },
+    {
+      "id": 518,
+      "symbol": "S_USDT",
+      "name": "S_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 519,
+      "symbol": "MPC_USDT",
+      "name": "MPC_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 520,
+      "symbol": "PLUME_USDT",
+      "name": "PLUME_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 521,
+      "symbol": "FARTCOIN_USDT",
+      "name": "FARTCOIN_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 522,
+      "symbol": "AI16Z_USDT",
+      "name": "AI16Z_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 523,
+      "symbol": "GRIFFAIN_USDT",
+      "name": "GRIFFAIN_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 524,
+      "symbol": "VIRTUAL_USDT",
+      "name": "VIRTUAL_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 525,
+      "symbol": "AIXBT_USDT",
+      "name": "AIXBT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 526,
+      "symbol": "KBL_WHBAR",
+      "name": "KBL_WHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 527,
+      "symbol": "GRELF_WHBAR",
+      "name": "GRELF_WHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 528,
+      "symbol": "BERA_USDT",
+      "name": "BERA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 529,
+      "symbol": "pETH_USD",
+      "name": "pETH_USD (Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 530,
+      "symbol": "nELIXIR_pUSD",
+      "name": "nELIXIR_pUSD (Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 531,
+      "symbol": "pacARB_NAV",
+      "name": "pacARB_NAV (Primary Net asset Value)",
+      "status": "deprecated"
+    },
+    {
+      "id": 532,
+      "symbol": "BONZO_WHBAR",
+      "name": "BONZO_WHBAR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 533,
+      "symbol": "HTX_USDT",
+      "name": "HTX_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 534,
+      "symbol": "WAL_USDT",
+      "name": "WAL_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 535,
+      "symbol": "stSUI_USDC",
+      "name": "stSUI_USDC",
+      "status": "deprecated"
+    },
+    {
+      "id": 536,
+      "symbol": "ALPHA_stSUI",
+      "name": "ALPHA_stSUI",
+      "status": "deprecated"
+    },
+    {
+      "id": 537,
+      "symbol": "LBTC_SUI",
+      "name": "LBTC_SUI",
+      "status": "under-supervision"
+    },
+    {
+      "id": 538,
+      "symbol": "stSUI_SUI",
+      "name": "stSUI_SUI (Primary Exchange Rate)",
+      "status": "premium"
+    },
+    {
+      "id": 540,
+      "symbol": "HAEDAL_USDT",
+      "name": "HAEDAL_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 541,
+      "symbol": "nBasis_USD",
+      "name": "nBasis_USD (Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 542,
+      "symbol": "UP_SUI",
+      "name": "UP_SUI",
+      "status": "under-supervision"
+    },
+    {
+      "id": 543,
+      "symbol": "nCREDIT_USD",
+      "name": "nCREDIT_USD(Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 544,
+      "symbol": "nPAYFI_USD",
+      "name": "nPAYFI_USD(Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 545,
+      "symbol": "nINSTO_USD",
+      "name": "nINSTO_USD(Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 546,
+      "symbol": "nETF_USD",
+      "name": "nETF_USD(Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 547,
+      "symbol": "nBTC_USD",
+      "name": "nBTC_USD(Primary Exchange Rate)",
+      "status": "deprecated"
+    },
+    {
+      "id": 548,
+      "symbol": "A_USDT",
+      "name": "A_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 549,
+      "symbol": "PI_USDT",
+      "name": "PI_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 550,
+      "symbol": "USD1_USDT",
+      "name": "USD1_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 551,
+      "symbol": "HYPE_USDT",
+      "name": "HYPE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 552,
+      "symbol": "PUMP_USDT",
+      "name": "PUMP_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 553,
+      "symbol": "PENGU_USDT",
+      "name": "PENGU_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 554,
+      "symbol": "IKA_USDT",
+      "name": "IKA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 555,
+      "symbol": "TREE_USDT",
+      "name": "TREE_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 556,
+      "symbol": "DOG_USDT",
+      "name": "DOG_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 557,
+      "symbol": "LOBO_USDT",
+      "name": "LOBO_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 558,
+      "symbol": "ALKIMI_USDT",
+      "name": "ALKIMI_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 559,
+      "symbol": "stSUPRA_SUPRA",
+      "name": "stSUPRA_SUPRA (Primary Exchange Rate",
+      "status": "premium"
+    },
+    {
+      "id": 560,
+      "symbol": "YZY_USDT",
+      "name": "YZY_USDT",
+      "status": "deprecated"
+    },
+    {
+      "id": 561,
+      "symbol": "RED_USDT",
+      "name": "RED_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 562,
+      "symbol": "RON_USDT",
+      "name": "RON_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 563,
+      "symbol": "WLFI_USDT",
+      "name": "WLFI_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 564,
+      "symbol": "LINEA_USDT",
+      "name": "LINEA_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 565,
+      "symbol": "ASTER_USDT",
+      "name": "ASTER_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 566,
+      "symbol": "2Z_USDT",
+      "name": "2Z_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 567,
+      "symbol": "XPL_USDT",
+      "name": "XPL_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 568,
+      "symbol": "MMT_USDT",
+      "name": "MMT_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 569,
+      "symbol": "MON_USDT",
+      "name": "MON_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 570,
+      "symbol": "MORPHO_USDT",
+      "name": "MORPHO_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 571,
+      "symbol": "FLUID_USDT",
+      "name": "FLUID_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 572,
+      "symbol": "soUSD_USD",
+      "name": "soUSD_USD",
+      "status": "premium"
+    },
+    {
+      "id": 573,
+      "symbol": "XDC_USD",
+      "name": "XDC_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 574,
+      "symbol": "FRAX_USDT",
+      "name": "FRAX_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 575,
+      "symbol": "MANTRA_USDT",
+      "name": "MANTRA_USDT",
+      "status": "standard"
+    },
+    {
+      "id": 576,
+      "symbol": "wsrUSD_USD",
+      "name": "wsrUSD_USD",
+      "status": "premium"
+    },
+    {
+      "id": 577,
+      "symbol": "GRAM_USDT",
+      "name": "GRAM_USDT",
+      "status": "premium"
+    },
+    {
+      "id": 5000,
+      "symbol": "EUR_USD",
+      "name": "EUR_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5001,
+      "symbol": "USD_JPY",
+      "name": "USD_JPY",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5002,
+      "symbol": "GBP_USD",
+      "name": "GBP_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5003,
+      "symbol": "EUR_GBP",
+      "name": "EUR_GBP",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5004,
+      "symbol": "USD_KRW",
+      "name": "USD_KRW",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5005,
+      "symbol": "USD_HKD",
+      "name": "USD_HKD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5006,
+      "symbol": "USD_INR",
+      "name": "USD_INR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5007,
+      "symbol": "USD_CNY",
+      "name": "USD_CNY",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5008,
+      "symbol": "USD_SGD",
+      "name": "USD_SGD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5009,
+      "symbol": "USD_THB",
+      "name": "USD_THB",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5010,
+      "symbol": "AUD_USD",
+      "name": "AUD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5011,
+      "symbol": "USD_CAD",
+      "name": "USD_CAD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5012,
+      "symbol": "USD_CHF",
+      "name": "USD_CHF",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5013,
+      "symbol": "NZD_USD",
+      "name": "NZD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5014,
+      "symbol": "USD_VND",
+      "name": "USD_VND",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5015,
+      "symbol": "USD_PHP",
+      "name": "USD_PHP",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5016,
+      "symbol": "USD_UAH",
+      "name": "USD_UAH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5017,
+      "symbol": "USD_PKR",
+      "name": "USD_PKR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5018,
+      "symbol": "USD_BRL",
+      "name": "USD_BRL",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5019,
+      "symbol": "USD_RUB",
+      "name": "USD_RUB",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5020,
+      "symbol": "USD_IDR",
+      "name": "USD_IDR",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5021,
+      "symbol": "USD_TRY",
+      "name": "USD_TRY",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5022,
+      "symbol": "USD_NGN",
+      "name": "USD_NGN",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5023,
+      "symbol": "USD_ARS",
+      "name": "USD_ARS",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5024,
+      "symbol": "EUR_AUD",
+      "name": "EUR_AUD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5025,
+      "symbol": "GBP_JPY",
+      "name": "GBP_JPY",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5026,
+      "symbol": "CHF_JPY",
+      "name": "CHF_JPY",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5027,
+      "symbol": "EUR_CHF",
+      "name": "EUR_CHF",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5028,
+      "symbol": "AUD_JPY",
+      "name": "AUD_JPY",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5029,
+      "symbol": "GBP_CAD",
+      "name": "GBP_CAD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5030,
+      "symbol": "NZD_JPY",
+      "name": "NZD_JPY",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5500,
+      "symbol": "XAU_USD",
+      "name": "XAU_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5501,
+      "symbol": "XAG_USD",
+      "name": "XAG_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5502,
+      "symbol": "XBR_USD",
+      "name": "XBR_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5503,
+      "symbol": "WTI_USD",
+      "name": "WTI_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5504,
+      "symbol": "XPD_USD",
+      "name": "XPD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5505,
+      "symbol": "XPT_USD",
+      "name": "XPT_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 5506,
+      "symbol": "XG_USD",
+      "name": "XG_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6000,
+      "symbol": "TSLA_USD",
+      "name": "TSLA_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6001,
+      "symbol": "MSFT_USD",
+      "name": "MSFT_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6002,
+      "symbol": "NVDA_USD",
+      "name": "NVDA_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6003,
+      "symbol": "GOOG_USD",
+      "name": "GOOG_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6004,
+      "symbol": "AAPL_USD",
+      "name": "AAPL_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6005,
+      "symbol": "AMZN_USD",
+      "name": "AMZN_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6006,
+      "symbol": "META_USD",
+      "name": "META_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6007,
+      "symbol": "NFLX_USD",
+      "name": "NFLX_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6008,
+      "symbol": "PYPL_USD",
+      "name": "PYPL_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6009,
+      "symbol": "INTC_USD",
+      "name": "INTC_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6010,
+      "symbol": "COIN_USD",
+      "name": "COIN_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6011,
+      "symbol": "GME_USD",
+      "name": "GME_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6012,
+      "symbol": "AMD_USD",
+      "name": "AMD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6013,
+      "symbol": "DIS_USD",
+      "name": "DIS_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6014,
+      "symbol": "BRK.A_USD",
+      "name": "BRK.A_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 6015,
+      "symbol": "BABA_USD",
+      "name": "BABA_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6016,
+      "symbol": "XOM_USD",
+      "name": "XOM_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6017,
+      "symbol": "TMO_USD",
+      "name": "TMO_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6018,
+      "symbol": "UNH_USD",
+      "name": "UNH_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6019,
+      "symbol": "LLY_USD",
+      "name": "LLY_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6020,
+      "symbol": "HD_USD",
+      "name": "HD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6021,
+      "symbol": "TTD_USD",
+      "name": "TTD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6022,
+      "symbol": "CRM_USD",
+      "name": "CRM_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6023,
+      "symbol": "QCOM_USD",
+      "name": "QCOM_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6024,
+      "symbol": "PFE_USD",
+      "name": "PFE_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6025,
+      "symbol": "ABNB_USD",
+      "name": "ABNB_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6026,
+      "symbol": "SHOP_USD",
+      "name": "SHOP_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6027,
+      "symbol": "JD_USD",
+      "name": "JD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6028,
+      "symbol": "CVX_USD",
+      "name": "CVX_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6029,
+      "symbol": "JPM_USD",
+      "name": "JPM_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6030,
+      "symbol": "MU_USD",
+      "name": "MU_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6031,
+      "symbol": "SNAP_USD",
+      "name": "SNAP_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6032,
+      "symbol": "UBER_USD",
+      "name": "UBER_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6033,
+      "symbol": "ZM_USD",
+      "name": "ZM_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 6034,
+      "symbol": "NIKE_USD",
+      "name": "NIKE_USD",
+      "status": "deprecated"
+    },
+    {
+      "id": 6035,
+      "symbol": "JNJ_USD",
+      "name": "JNJ_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6036,
+      "symbol": "PG_USD",
+      "name": "PG_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6037,
+      "symbol": "COST_USD",
+      "name": "COST_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6038,
+      "symbol": "ORCL_USD",
+      "name": "ORCL_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6039,
+      "symbol": "MSTR_USD",
+      "name": "MSTR_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6040,
+      "symbol": "SPY_USD",
+      "name": "SPY_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6041,
+      "symbol": "IBIT_USD",
+      "name": "IBIT_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6042,
+      "symbol": "ETHE_USD",
+      "name": "ETHE_USD (ETF)",
+      "status": "deprecated"
+    },
+    {
+      "id": 6043,
+      "symbol": "ETHA_USD",
+      "name": "ETHA_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6044,
+      "symbol": "ETHV_USD",
+      "name": "ETHV_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6045,
+      "symbol": "FETH_USD",
+      "name": "FETH_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6046,
+      "symbol": "ETHW_USD",
+      "name": "ETHW_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6047,
+      "symbol": "FBTC_USD",
+      "name": "FBTC_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6048,
+      "symbol": "GBTC_USD",
+      "name": "GBTC_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6049,
+      "symbol": "ARKB_USD",
+      "name": "ARKB_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6050,
+      "symbol": "BITB_USD",
+      "name": "BITB_USD (ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6051,
+      "symbol": "V_USD",
+      "name": "V_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6052,
+      "symbol": "MA_USD",
+      "name": "MA_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6053,
+      "symbol": "WMT_USD",
+      "name": "WMT_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6054,
+      "symbol": "BAC_USD",
+      "name": "BAC_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6055,
+      "symbol": "ABBV_USD",
+      "name": "ABBV_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6056,
+      "symbol": "WFC_USD",
+      "name": "WFC_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6057,
+      "symbol": "CSCO_USD",
+      "name": "CSCO_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6058,
+      "symbol": "MRK_USD",
+      "name": "MRK_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6059,
+      "symbol": "KO_USD",
+      "name": "KO_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6060,
+      "symbol": "NOW_USD",
+      "name": "NOW_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6061,
+      "symbol": "ACN_USD",
+      "name": "ACN_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6062,
+      "symbol": "ABT_USD",
+      "name": "ABT_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6063,
+      "symbol": "GE_USD",
+      "name": "GE_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6064,
+      "symbol": "LIN_USD",
+      "name": "LIN_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6065,
+      "symbol": "ISRG_USD",
+      "name": "ISRG_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6066,
+      "symbol": "IBM_USD",
+      "name": "IBM_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6067,
+      "symbol": "PEP_USD",
+      "name": "PEP_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6068,
+      "symbol": "MCD_USD",
+      "name": "MCD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6069,
+      "symbol": "GS_USD",
+      "name": "GS_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6070,
+      "symbol": "PM_USD",
+      "name": "PM_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6071,
+      "symbol": "CAT_USD",
+      "name": "CAT_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6072,
+      "symbol": "ADBE_USD",
+      "name": "ADBE_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6073,
+      "symbol": "AXP_USD",
+      "name": "AXP_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6074,
+      "symbol": "MS_USD",
+      "name": "MS_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6075,
+      "symbol": "TXN_USD",
+      "name": "TXN_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6076,
+      "symbol": "INTU_USD",
+      "name": "INTU_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6077,
+      "symbol": "TRTX_USD",
+      "name": "TRTX_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6078,
+      "symbol": "VZ_USD",
+      "name": "VZ_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6079,
+      "symbol": "SPGI_USD",
+      "name": "SPGI_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6080,
+      "symbol": "PLTR_USD",
+      "name": "PLTR_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6081,
+      "symbol": "DHR_USD",
+      "name": "DHR_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6082,
+      "symbol": "BKNG_USD",
+      "name": "BKNG_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6083,
+      "symbol": "C_USD",
+      "name": "C_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6084,
+      "symbol": "AMAT_USD",
+      "name": "AMAT_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6085,
+      "symbol": "UNP_USD",
+      "name": "UNP_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6086,
+      "symbol": "BSX_USD",
+      "name": "BSX_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6087,
+      "symbol": "NEE_USD",
+      "name": "NEE_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6088,
+      "symbol": "LOW_USD",
+      "name": "LOW_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6089,
+      "symbol": "BLK_USD",
+      "name": "BLK_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6090,
+      "symbol": "AMGN_USD",
+      "name": "AMGN_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6091,
+      "symbol": "ETN_USD",
+      "name": "ETN_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6092,
+      "symbol": "HON_USD",
+      "name": "HON_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6093,
+      "symbol": "CMCSA_USD",
+      "name": "CMCSA_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6094,
+      "symbol": "PGR_USD",
+      "name": "PGR_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6095,
+      "symbol": "TJX_USD",
+      "name": "TJX_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6096,
+      "symbol": "SYK_USD",
+      "name": "SYK_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6097,
+      "symbol": "BX_USD",
+      "name": "BX_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6098,
+      "symbol": "ANET_USD",
+      "name": "ANET_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6099,
+      "symbol": "DE_USD",
+      "name": "DE_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6100,
+      "symbol": "COP_USD",
+      "name": "COP_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6101,
+      "symbol": "BA_USD",
+      "name": "BA_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6102,
+      "symbol": "ADP_USD",
+      "name": "ADP_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6103,
+      "symbol": "BMY_USD",
+      "name": "BMY_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6104,
+      "symbol": "PANW_USD",
+      "name": "PANW_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6105,
+      "symbol": "SCHW_USD",
+      "name": "SCHW_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6106,
+      "symbol": "FI_USD",
+      "name": "FI_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6107,
+      "symbol": "GILD_USD",
+      "name": "GILD_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6108,
+      "symbol": "GEV_USD",
+      "name": "GEV_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6109,
+      "symbol": "MDT_USD",
+      "name": "MDT_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6110,
+      "symbol": "VRTX_USD",
+      "name": "VRTX_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6111,
+      "symbol": "SBUX_USD",
+      "name": "SBUX_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6112,
+      "symbol": "CRCL_USD",
+      "name": "CRCL_USD",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6113,
+      "symbol": "SPDIA_USD",
+      "name": "SPDIA_USD (SPDR S&P 500 ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6114,
+      "symbol": "QQQM_USD",
+      "name": "QQQM_USD (Nasdaq-100 ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 6115,
+      "symbol": "IWM_USD",
+      "name": "IWM_USD (TrustSPDR Dow Jones Industrial Average ETF)",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50000,
+      "symbol": "SUPRA",
+      "name": "SUPRA",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50001,
+      "symbol": "BTC",
+      "name": "BTC",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50002,
+      "symbol": "ETH",
+      "name": "ETH",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50003,
+      "symbol": "SOL",
+      "name": "SOL",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50004,
+      "symbol": "BNB",
+      "name": "BNB",
+      "status": "deprecated"
+    },
+    {
+      "id": 50005,
+      "symbol": "XRP",
+      "name": "XRP",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50006,
+      "symbol": "DOGE",
+      "name": "DOGE",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50007,
+      "symbol": "TON",
+      "name": "TON",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50008,
+      "symbol": "ADA",
+      "name": "ADA",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50009,
+      "symbol": "TRX",
+      "name": "TRX",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50010,
+      "symbol": "AVAX",
+      "name": "AVAX",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50011,
+      "symbol": "LINK",
+      "name": "LINK",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50012,
+      "symbol": "SHIB",
+      "name": "SHIB",
+      "status": "deprecated"
+    },
+    {
+      "id": 50013,
+      "symbol": "SUI",
+      "name": "SUI",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50014,
+      "symbol": "MOVE",
+      "name": "MOVE",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50015,
+      "symbol": "APTOS",
+      "name": "APTOS",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50016,
+      "symbol": "PEPE",
+      "name": "PEPE",
+      "status": "deprecated"
+    },
+    {
+      "id": 50017,
+      "symbol": "FLOKI",
+      "name": "FLOKI",
+      "status": "deprecated"
+    },
+    {
+      "id": 50018,
+      "symbol": "BONK",
+      "name": "BONK",
+      "status": "under-supervision"
+    },
+    {
+      "id": 50019,
+      "symbol": "WIF",
+      "name": "WIF",
+      "status": "deprecated"
+    },
+    {
+      "id": 50020,
+      "symbol": "MOG",
+      "name": "MOG",
+      "status": "deprecated"
+    },
+    {
+      "id": 50021,
+      "symbol": "PNUT",
+      "name": "PNUT",
+      "status": "deprecated"
+    },
+    {
+      "id": 50022,
+      "symbol": "POPCAT",
+      "name": "POPCAT",
+      "status": "deprecated"
+    },
+    {
+      "id": 50023,
+      "symbol": "BRETT",
+      "name": "BRETT",
+      "status": "deprecated"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": 539,
+      "listings": [
+        {
+          "id": 539,
+          "symbol": "hSUITE_HBAR",
+          "name": "hSUITE_HBAR",
+          "status": "deprecated"
+        },
+        {
+          "id": 539,
+          "symbol": "stSUI_SUI",
+          "name": "stSUI_SUI (Primary Exchange Rate)",
+          "status": "premium"
+        }
+      ]
+    }
+  ]
+}

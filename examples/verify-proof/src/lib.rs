@@ -4,7 +4,7 @@ use solana_program::{
     account_info::AccountInfo, clock::Clock, entrypoint, entrypoint::ProgramResult,
     program::set_return_data, pubkey::Pubkey, sysvar::Sysvar,
 };
-use supra_verifier_solana::{Error, Proof, MAX_AGE_MS};
+use supra_verifier_solana::{crypto, Error, Proof, MAX_AGE_MS};
 
 /// Example policy: accept the original observation only in the exact scheduled
 /// second, never in the future, no older than 30 minutes, and strictly ordered.
@@ -40,12 +40,26 @@ pub fn process_instruction(
     accounts: &[AccountInfo],
     data: &[u8],
 ) -> ProgramResult {
-    if !accounts.is_empty() || data.len() < 16 {
+    if !accounts.is_empty() || data.len() < 28 {
         return Err(Error::Encoding.into());
     }
-    let expected_second = u64::from_le_bytes(data[..8].try_into().unwrap());
-    let previous_ms = u64::from_le_bytes(data[8..16].try_into().unwrap());
-    let quote = Proof::decode(&data[16..])?.verify()?;
+    let expected_pair = u32::from_le_bytes(data[..4].try_into().unwrap());
+    let expected_committee = u64::from_le_bytes(data[4..12].try_into().unwrap());
+    let expected_second = u64::from_le_bytes(data[12..20].try_into().unwrap());
+    let previous_ms = u64::from_le_bytes(data[20..28].try_into().unwrap());
+    // Two independently captured configurations, selected explicitly. The
+    // instruction supplies neither a public key nor a signing domain.
+    let key = match expected_committee {
+        0 => &crypto::HISTORICAL_COMMITTEE_0_PUBLIC_KEY,
+        1 => &crypto::CANONICAL_PUBLIC_KEY,
+        _ => return Err(Error::Committee.into()),
+    };
+    let quote = Proof::decode(&data[28..])?.verify_with(
+        expected_pair,
+        expected_committee,
+        key,
+        &crypto::CANONICAL_DOMAIN,
+    )?;
     let now_second = u64::try_from(Clock::get()?.unix_timestamp).map_err(|_| Error::Future)?;
     validate_time(
         quote.timestamp_ms(),

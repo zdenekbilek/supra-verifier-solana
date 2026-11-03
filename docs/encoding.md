@@ -1,6 +1,6 @@
 # Supported encoding
 
-The current codec supports one committee and one BTC/USD price leaf from Supra's
+The current codec supports one committee and one explicitly selected price leaf from Supra's
 EVM-ABI pull-proof response. It removes ABI padding without changing signed data.
 Multi-committee, multi-leaf and nonzero multiproof flags are rejected.
 
@@ -33,10 +33,10 @@ performing the original BN254 pairing verification.
 
 ## Example instruction
 
-The stateless example prepends two little-endian `u64`s: expected Unix second
-and previous observation Unix milliseconds. This 16-byte prefix belongs to the
-example, not to `Proof::decode`. `tools/proof.ts::instructionData` creates this
-example-specific envelope. The expected timestamp uses **seconds**, while the
+The stateless example prepends expected pair `u32`, expected committee `u64`,
+expected Unix second `u64` and previous observation Unix milliseconds `u64`, all
+little endian. This 28-byte prefix belongs to the example, not to `Proof::decode`. `tools/proof.ts::instructionData` creates this
+example-specific envelope. The pair and committee must be selected explicitly. The expected timestamp uses **seconds**, while the
 previous timestamp and original signed observation use **milliseconds**.
 
 The example returns only the original 38 quote bytes. Committee and trust must

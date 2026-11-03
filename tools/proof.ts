@@ -1,5 +1,10 @@
-import { SUPRA_DOMAIN_HEX, SUPRA_PUBLIC_KEY_HEX } from './trust.js';
 import {
+  SUPRA_COMMITTEE_0_PUBLIC_KEY_HEX,
+  SUPRA_DOMAIN_HEX,
+  SUPRA_PUBLIC_KEY_HEX,
+} from './trust.js';
+import {
+  assertPairId,
   buildWitnessesBytes,
   decodeSupraQuoteBytes,
   hashToSupraPoint,
@@ -17,7 +22,7 @@ export function buildWitnesses(
   return Buffer.from(buildWitnessesBytes(root, domain));
 }
 
-// Only the one-committee, one-leaf BTC/USD proof shape is supported here.
+// Only the one-committee, one-leaf proof shape is supported here.
 // Packing removes ABI padding; every original signed field is retained.
 export const PROOF_ENDPOINT = 'https://rpc-mainnet-dora-2.supra.com/get_proof';
 const MAX_DEPTH = 16;
@@ -36,7 +41,8 @@ export function littleEndian(value: bigint | number | string, length: number) {
   return out;
 }
 
-export function compactProof(hex: string) {
+export function compactProof(hex: string, expectedPair: number) {
+  assertPairId(expectedPair);
   if (typeof hex !== 'string' || !/^(?:0x)?(?:[a-fA-F0-9]{2})+$/.test(hex))
     throw new Error('Invalid proof hex');
   const input = Buffer.from(hex.replace(/^0x/, ''), 'hex');
@@ -72,7 +78,8 @@ export function compactProof(hex: string) {
     uint(leaf + 96),
     uint(leaf + 128),
   ];
-  if (values[0] !== 18n) throw new Error('Expected BTC/USD pair 18');
+  if (values[0] !== BigInt(expectedPair))
+    throw new Error('Unexpected proof pair');
   const quote = Buffer.concat(
     values.map((value, i) => littleEndian(value, [4, 16, 8, 2, 8][i])),
   );
@@ -101,12 +108,17 @@ export function compactProof(hex: string) {
 /** Instruction envelope for the stateless example only; expectedSecond is in Unix seconds. */
 export function instructionData(
   proof: Buffer,
+  expectedPair: number,
+  expectedCommittee: bigint | number,
   expectedSecond: bigint | number,
   previousMs = 0n,
   witnesses = buildWitnesses(proof.subarray(46, 78)),
 ) {
+  assertPairId(expectedPair);
   if (witnesses.length !== 324) throw new Error('Expected 324 witness bytes');
   return Buffer.concat([
+    littleEndian(expectedPair, 4),
+    littleEndian(expectedCommittee, 8),
     littleEndian(expectedSecond, 8),
     littleEndian(previousMs, 8),
     proof,
@@ -114,11 +126,12 @@ export function instructionData(
   ]);
 }
 
-export async function fetchProof(signal?: AbortSignal) {
+export async function fetchProof(expectedPair: number, signal?: AbortSignal) {
+  assertPairId(expectedPair);
   const response = await fetch(PROOF_ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ pair_indexes: [18], chain_type: 'evm' }),
+    body: JSON.stringify({ pair_indexes: [expectedPair], chain_type: 'evm' }),
     signal: signal
       ? AbortSignal.any([signal, AbortSignal.timeout(10_000)])
       : AbortSignal.timeout(10_000),
@@ -137,10 +150,13 @@ export async function fetchProof(signal?: AbortSignal) {
   if (
     !Array.isArray(body.pair_indexes) ||
     body.pair_indexes.length !== 1 ||
-    body.pair_indexes[0] !== 18
+    body.pair_indexes[0] !== expectedPair
   )
     throw new Error('Unexpected proof pair');
-  return { hex: body.proof_bytes, compact: compactProof(body.proof_bytes) };
+  return {
+    hex: body.proof_bytes,
+    compact: compactProof(body.proof_bytes, expectedPair),
+  };
 }
 
 export interface SupraTrust {
@@ -154,6 +170,12 @@ export const SUPRA_TRUST: SupraTrust = {
   publicKey: SUPRA_PUBLIC_KEY,
   domain: SUPRA_DOMAIN,
 };
+/** Optional historical committee-0 configuration; never obtained from a proof. */
+export const SUPRA_COMMITTEE_0_TRUST: SupraTrust = {
+  committeeId: 0n,
+  publicKey: Buffer.from(SUPRA_COMMITTEE_0_PUBLIC_KEY_HEX, 'hex'),
+  domain: SUPRA_DOMAIN,
+};
 /** Structural decoding only. Use verifySupraProof to authenticate a quote. */
 export function decodeSupraQuote(compact: Buffer) {
   return decodeSupraQuoteBytes(compact);
@@ -163,17 +185,21 @@ export function trustHash(trust: SupraTrust): Buffer {
 }
 export function verifySupraProof(
   compact: Buffer,
+  expectedPair: number,
   trust: SupraTrust = SUPRA_TRUST,
 ) {
-  return verifySupraProofBytes(compact, trust);
+  return verifySupraProofBytes(compact, expectedPair, trust);
 }
 
 /** Append untrusted arithmetic witnesses; this does not authenticate the proof. */
 export function encodeProof(
   compact: Buffer,
+  expectedPair: number,
   domain: Buffer = SUPRA_DOMAIN,
 ): Buffer {
-  decodeSupraQuote(compact);
+  assertPairId(expectedPair);
+  if (decodeSupraQuote(compact).pair_id !== expectedPair)
+    throw new Error('Unexpected proof pair');
   return Buffer.concat([
     compact,
     buildWitnesses(compact.subarray(46, 78), domain),

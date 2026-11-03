@@ -2,7 +2,14 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import {
+  copyFileSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -84,11 +91,14 @@ for (const filename of [
   'README.md',
   'src/lib.rs',
   'src/crypto.rs',
+  'tests/consumer.rs',
   'fixtures/btc-usd.json',
   'fixtures/vectors.json',
   'fixtures/committee.json',
   'fixtures/forged-tree.json',
+  'fixtures/pairs.json',
   'fixtures/SHA256SUMS',
+  'catalog/pairs.json',
   'docs/provenance.md',
 ]) {
   assert(
@@ -98,7 +108,7 @@ for (const filename of [
 }
 for (const filename of files) {
   assert(
-    /^(?:src\/|fixtures\/|docs\/|Cargo\.(?:toml(?:\.orig)?|lock)$|README\.md$|LICENSE$|NOTICE$|CHANGELOG\.md$|\.cargo_vcs_info\.json$)/.test(
+    /^(?:src\/|tests\/|fixtures\/|catalog\/|docs\/|Cargo\.(?:toml(?:\.orig)?|lock)$|README\.md$|LICENSE$|NOTICE$|CHANGELOG\.md$|\.cargo_vcs_info\.json$)/.test(
       filename,
     ),
     `Unexpected release file: ${filename}`,
@@ -131,9 +141,65 @@ try {
     cwd: temporary,
     env: {
       ...process.env,
-      CARGO_TARGET_DIR: path.join(root, 'target/package-tests'),
+      CARGO_TARGET_DIR: path.join(temporary, 'target'),
     },
   });
+  // Build the shipped public API as a renamed dependency in an unrelated
+  // workspace, with no access to the checkout's sources or workspace settings.
+  const consumer = path.join(temporary, 'consumer');
+  const extracted = path.dirname(manifest);
+  const fixtureDependencies = ['hex', 'serde_json']
+    .map((name) => {
+      const dependency = pkg.dependencies.find(
+        (dependency) => dependency.name === name && dependency.kind === 'dev',
+      );
+      assert(dependency, `Missing fixture dependency: ${name}`);
+      return `${name} = ${JSON.stringify(dependency.req)}`;
+    })
+    .join('\n');
+  mkdirSync(path.join(consumer, 'tests'), { recursive: true });
+  mkdirSync(path.join(consumer, 'fixtures'));
+  writeFileSync(
+    path.join(consumer, 'Cargo.toml'),
+    `[package]
+name = "verifier-consumer-check"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[dependencies]
+verifier = { package = ${JSON.stringify(pkg.name)}, path = ${JSON.stringify(extracted)} }
+${fixtureDependencies}
+`,
+  );
+  writeFileSync(
+    path.join(consumer, 'tests/consumer.rs'),
+    readFileSync(path.join(extracted, 'tests/consumer.rs'), 'utf8').replace(
+      'use supra_verifier_solana::',
+      'use verifier::',
+    ),
+  );
+  copyFileSync(
+    path.join(extracted, 'fixtures/btc-usd.json'),
+    path.join(consumer, 'fixtures/btc-usd.json'),
+  );
+  copyFileSync(
+    path.join(extracted, 'Cargo.lock'),
+    path.join(consumer, 'Cargo.lock'),
+  );
+  run(
+    'cargo',
+    ['test', '--manifest-path', path.join(consumer, 'Cargo.toml'), '--offline'],
+    {
+      cwd: consumer,
+      env: {
+        ...process.env,
+        CARGO_TARGET_DIR: path.join(temporary, 'target'),
+      },
+    },
+  );
 } finally {
   rmSync(temporary, { recursive: true, force: true });
 }

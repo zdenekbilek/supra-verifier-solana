@@ -11,9 +11,11 @@
   "scripts": {
     "test": "node --import tsx --test tools/*.test.mjs",
     "typecheck": "tsc --noEmit",
-    "format:check": "prettier --check scripts tools examples/verify-proof/run.mjs package.json tsconfig.json .github/workflows/*.yml",
+    "format:check": "prettier --check scripts tools examples/verify-proof/run.mjs package.json tsconfig.json .github",
     "test:integration": "node --import tsx examples/verify-proof/run.mjs",
-    "check:release": "node scripts/check-release.mjs"
+    "check:release": "node scripts/check-release.mjs",
+    "catalog:update": "node scripts/update-catalog.mjs",
+    "fixtures:capture": "node --import tsx scripts/capture-pairs.mjs"
   },
   "dependencies": {
     "@noble/curves": "1.9.7",

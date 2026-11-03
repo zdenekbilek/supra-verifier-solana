@@ -1,4 +1,4 @@
-//! Independent Supra BTC/USD pull-proof verification for Solana.
+//! Independent pair-bound Supra pull-proof verification for Solana.
 //!
 //! Decode compact proof bytes followed by 324 arithmetic witness bytes with
 //! [`Proof::decode`], then authenticate them with [`Proof::verify`] or
@@ -14,14 +14,14 @@
 //! use supra_verifier_solana::{Error, Proof, VerifiedQuote};
 //!
 //! fn authenticate(bytes: &[u8]) -> Result<VerifiedQuote<'_>, Error> {
-//!     Proof::decode(bytes)?.verify()
+//!     Proof::decode(bytes)?.verify(18)
 //! }
 //! ```
 #![forbid(unsafe_code)]
 
 use solana_program::program_error::ProgramError;
 /// Low-level BN254, Merkle and trust-key primitives.
-/// Prefer [`Proof`] for complete BTC/USD proof verification.
+/// Prefer [`Proof`] for complete pair-bound proof verification.
 pub mod crypto;
 
 /// Byte length of the packed signed quote.
@@ -34,7 +34,7 @@ pub const TRUSTED_COMMITTEE: u64 = 1;
 pub const WITNESS_LEN: usize = 324;
 /// Maximum age used by the example's policy; the library does not check time.
 pub const MAX_AGE_MS: u64 = 1_800_000;
-/// The only supported feed: BTC/USD. BTC/USDT is a different feed.
+/// Convenience ID for BTC/USD; callers must select their expected pair explicitly.
 pub const BTC_USD_PAIR: u32 = 18;
 
 /// Verification errors and example policy errors.
@@ -48,7 +48,7 @@ pub enum Error {
     Encoding = 1,
     /// Wrong committee or invalid trust key.
     Committee,
-    /// Unsupported feed identifier.
+    /// Signed feed identifier differs from the caller's expected pair.
     Pair,
     /// Zero price or unsupported decimal count.
     Price,
@@ -98,7 +98,7 @@ pub struct Proof<'a> {
     witnesses: &'a [u8; WITNESS_LEN],
 }
 
-/// A signed BTC/USD observation authenticated by a verified proof.
+/// A signed observation authenticated for the caller-selected pair and trust.
 ///
 /// This establishes authenticity under the selected trust, not freshness,
 /// economic accuracy, authorization to settle, or perpetual validity of the key.
@@ -115,7 +115,7 @@ impl<'a> VerifiedQuote<'a> {
         self.committee
     }
 
-    /// Signed feed ID (currently always [`BTC_USD_PAIR`]).
+    /// Signed feed ID, matched against the caller's expected pair.
     pub fn pair(&self) -> u32 {
         u32::from_le_bytes(self.bytes[..4].try_into().unwrap())
     }
@@ -170,11 +170,11 @@ impl<'a> Proof<'a> {
         })
     }
 
-    fn validate_quote_for(&self, committee: u64) -> Result<(), Error> {
+    fn validate_quote_for(&self, expected_pair: u32, committee: u64) -> Result<(), Error> {
         if self.committee != committee {
             return Err(Error::Committee);
         }
-        if u32::from_le_bytes(self.quote[..4].try_into().unwrap()) != BTC_USD_PAIR {
+        if u32::from_le_bytes(self.quote[..4].try_into().unwrap()) != expected_pair {
             return Err(Error::Pair);
         }
         let price = u128::from_le_bytes(self.quote[4..20].try_into().unwrap());
@@ -186,9 +186,11 @@ impl<'a> Proof<'a> {
     }
 
     /// Verify using the historical committee-1 public-key/domain snapshot.
+    /// The signed pair must match `expected_pair`; no feed ID is implicitly trusted.
     /// This performs no Clock reads and imposes no freshness or lifecycle policy.
-    pub fn verify(&self) -> Result<VerifiedQuote<'a>, Error> {
+    pub fn verify(&self, expected_pair: u32) -> Result<VerifiedQuote<'a>, Error> {
         self.verify_with(
+            expected_pair,
             TRUSTED_COMMITTEE,
             &crypto::CANONICAL_PUBLIC_KEY,
             &crypto::CANONICAL_DOMAIN,
@@ -196,16 +198,18 @@ impl<'a> Proof<'a> {
     }
 
     /// Verify using independently authenticated, application-configured trust.
+    /// Reject a signed pair that differs from `expected_pair`, even if its signature is valid.
     /// Never pass trust learned from the untrusted proof response. Validate keys
     /// at configuration time with [`crypto::validate_public_key`], and bind the
     /// selected trust to any application state that depends on it.
     pub fn verify_with(
         &self,
+        expected_pair: u32,
         committee: u64,
         key: &[u8; 128],
         domain: &[u8; 32],
     ) -> Result<VerifiedQuote<'a>, Error> {
-        self.validate_quote_for(committee)?;
+        self.validate_quote_for(expected_pair, committee)?;
         crypto::verify_merkle(self.quote, self.siblings, self.root)?;
         crypto::verify_signature_with_key(self.root, self.signature, self.witnesses, key, domain)?;
         Ok(VerifiedQuote {
@@ -232,13 +236,16 @@ mod tests {
 
     #[test]
     fn authentic_public_btc_usd_proof_matches_the_independent_evm_verifier() {
-        Proof::decode(&fixture()).unwrap().verify().unwrap();
+        Proof::decode(&fixture())
+            .unwrap()
+            .verify(BTC_USD_PAIR)
+            .unwrap();
     }
 
     #[test]
     fn authenticated_quote_preserves_original_integer_fields() {
         let bytes = fixture();
-        let quote = Proof::decode(&bytes).unwrap().verify().unwrap();
+        let quote = Proof::decode(&bytes).unwrap().verify(BTC_USD_PAIR).unwrap();
         assert_eq!(quote.committee(), 1);
         assert_eq!(quote.pair(), 18);
         assert_eq!(quote.price(), 7_788_800_500_000);
@@ -249,20 +256,99 @@ mod tests {
     }
 
     #[test]
+    fn authentic_pairs_require_the_selected_feed_and_independently_pinned_committee() {
+        let document: serde_json::Value =
+            serde_json::from_str(include_str!("../fixtures/pairs.json")).unwrap();
+        for vector in document["vectors"].as_array().unwrap() {
+            let bytes = hex::decode(format!(
+                "{}{}",
+                vector["compactHex"].as_str().unwrap(),
+                vector["witnessHex"].as_str().unwrap()
+            ))
+            .unwrap();
+            let pair = u32::try_from(vector["pair"].as_u64().unwrap()).unwrap();
+            let committee: u64 = vector["quote"]["committee_id"]
+                .as_str()
+                .unwrap()
+                .parse()
+                .unwrap();
+            let key = match committee {
+                0 => &crypto::HISTORICAL_COMMITTEE_0_PUBLIC_KEY,
+                1 => &crypto::CANONICAL_PUBLIC_KEY,
+                _ => panic!("fixture committee is not independently pinned"),
+            };
+            crypto::validate_public_key(key).unwrap();
+            let proof = Proof::decode(&bytes).unwrap();
+            let quote = proof
+                .verify_with(pair, committee, key, &crypto::CANONICAL_DOMAIN)
+                .unwrap();
+            assert_eq!(quote.pair(), pair);
+            assert_eq!(quote.committee(), committee);
+            assert_eq!(
+                quote.price().to_string(),
+                vector["quote"]["price"].as_str().unwrap()
+            );
+            assert_eq!(
+                u64::from(quote.decimals()),
+                vector["quote"]["decimals"].as_u64().unwrap()
+            );
+            assert_eq!(
+                quote.timestamp_ms(),
+                vector["quote"]["publish_time_ms"].as_u64().unwrap()
+            );
+            assert_eq!(
+                quote.oracle_round().to_string(),
+                vector["quote"]["oracle_round"].as_str().unwrap()
+            );
+            assert_eq!(quote.as_bytes().as_slice(), &bytes[8..46]);
+            let other_pair = if pair == 0 { 1 } else { 0 };
+            assert_eq!(
+                proof.verify_with(other_pair, committee, key, &crypto::CANONICAL_DOMAIN),
+                Err(Error::Pair)
+            );
+            assert_eq!(
+                proof.verify_with(pair, 1 - committee, key, &crypto::CANONICAL_DOMAIN),
+                Err(Error::Committee)
+            );
+            let mut altered = bytes;
+            altered[8..12].copy_from_slice(&other_pair.to_le_bytes());
+            assert_eq!(
+                Proof::decode(&altered).unwrap().verify_with(
+                    other_pair,
+                    committee,
+                    key,
+                    &crypto::CANONICAL_DOMAIN
+                ),
+                Err(Error::Merkle)
+            );
+        }
+    }
+
+    #[test]
     fn configured_trust_cannot_change_the_authenticated_authority() {
         let bytes = fixture();
         let proof = Proof::decode(&bytes).unwrap();
         assert_eq!(
-            proof.verify_with(2, &crypto::CANONICAL_PUBLIC_KEY, &crypto::CANONICAL_DOMAIN),
+            proof.verify_with(
+                BTC_USD_PAIR,
+                2,
+                &crypto::CANONICAL_PUBLIC_KEY,
+                &crypto::CANONICAL_DOMAIN
+            ),
             Err(Error::Committee)
         );
         assert!(proof
-            .verify_with(1, &[0; 128], &crypto::CANONICAL_DOMAIN)
+            .verify_with(BTC_USD_PAIR, 1, &[0; 128], &crypto::CANONICAL_DOMAIN)
             .is_err());
         let mut other_domain = crypto::CANONICAL_DOMAIN;
         other_domain[0] ^= 1;
         assert!(proof
-            .verify_with(1, &crypto::CANONICAL_PUBLIC_KEY, &other_domain)
+            .verify_with(
+                BTC_USD_PAIR,
+                1,
+                &crypto::CANONICAL_PUBLIC_KEY,
+                &other_domain
+            )
             .is_err());
     }
 
@@ -293,7 +379,10 @@ mod tests {
             let mut altered = original.clone();
             altered[index] ^= 1;
             assert!(
-                Proof::decode(&altered).unwrap().verify().is_err(),
+                Proof::decode(&altered)
+                    .unwrap()
+                    .verify(BTC_USD_PAIR)
+                    .is_err(),
                 "byte {index}"
             );
         }
@@ -304,13 +393,13 @@ mod tests {
         let mut bytes = fixture();
         bytes[..8].copy_from_slice(&2_u64.to_le_bytes());
         assert_eq!(
-            Proof::decode(&bytes).unwrap().verify(),
+            Proof::decode(&bytes).unwrap().verify(BTC_USD_PAIR),
             Err(Error::Committee)
         );
         bytes[..8].copy_from_slice(&TRUSTED_COMMITTEE.to_le_bytes());
         bytes[78..142].fill(0);
         assert_eq!(
-            Proof::decode(&bytes).unwrap().verify(),
+            Proof::decode(&bytes).unwrap().verify(BTC_USD_PAIR),
             Err(Error::Signature)
         );
     }
@@ -327,7 +416,7 @@ mod tests {
                 vector["witnessHex"].as_str().unwrap()
             ))
             .unwrap();
-            Proof::decode(&bytes).unwrap().verify().unwrap();
+            Proof::decode(&bytes).unwrap().verify(BTC_USD_PAIR).unwrap();
         }
     }
 
@@ -338,7 +427,10 @@ mod tests {
             let mut altered = original.clone();
             altered[index] ^= 1;
             assert!(
-                Proof::decode(&altered).unwrap().verify().is_err(),
+                Proof::decode(&altered)
+                    .unwrap()
+                    .verify(BTC_USD_PAIR)
+                    .is_err(),
                 "witness byte {index}"
             );
         }
@@ -356,7 +448,7 @@ mod tests {
         .unwrap();
         let proof = Proof::decode(&forged).unwrap();
         crypto::verify_merkle(proof.quote, proof.siblings, proof.root).unwrap();
-        assert_eq!(proof.verify(), Err(Error::Signature));
+        assert_eq!(proof.verify(BTC_USD_PAIR), Err(Error::Signature));
         // A zero signature fails even before any expensive map arithmetic.
         assert_eq!(
             crypto::verify_signature(proof.root, &[0; 64], &[0; WITNESS_LEN]),
