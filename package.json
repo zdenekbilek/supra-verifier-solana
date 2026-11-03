@@ -23,7 +23,7 @@
     "@solana/web3.js": "1.99.0"
   },
   "devDependencies": {
-    "@types/node": "22.19.0",
+    "@types/node": "26.6.6",
     "prettier": "3.6.2",
     "tsx": "4.20.6",
     "typescript": "5.9.3"
