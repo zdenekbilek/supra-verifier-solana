@@ -1,0 +1,21 @@
+[package]
+name = "supra-verify-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "supra_verify_example"
+crate-type = ["cdylib", "lib"]
+
+[features]
+default = []
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+supra-verifier-solana = { path = "../.." }
+solana-program = { version = "=3.0.0", default-features = false }
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

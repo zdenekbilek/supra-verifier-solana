@@ -1,0 +1,36 @@
+name: Isolated Solana integration
+
+# Expensive SBF/Docker checks are opt-in. This never targets a public cluster.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.22.2'
+          cache: npm
+      - run: npm ci
+      - name: Install native Rust toolchain
+        run: |
+          rustup toolchain install 1.97.1 --profile minimal
+          rustup default 1.97.1
+      - name: Install pinned Solana CLI
+        run: |
+          curl --fail --silent --show-error --location https://release.anza.xyz/v4.1.2/install --output "$RUNNER_TEMP/install-solana.sh"
+          sh "$RUNNER_TEMP/install-solana.sh"
+          echo "$HOME/.local/share/solana/install/active_release/bin" >> "$GITHUB_PATH"
+      - run: npm run test:integration
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integration-results
+          path: target/results.json
+          if-no-files-found: ignore
