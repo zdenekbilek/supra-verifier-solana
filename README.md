@@ -3,6 +3,7 @@
 [![CI](https://github.com/zdenekbilek/supra-verifier-solana/actions/workflows/ci.yml/badge.svg)](https://github.com/zdenekbilek/supra-verifier-solana/actions/workflows/ci.yml)
 [![Rust 1.89+](https://img.shields.io/badge/rust-1.89%2B-93450a)](Cargo.toml)
 [![crates.io](https://img.shields.io/crates/v/supra-verifier-solana.svg)](https://crates.io/crates/supra-verifier-solana)
+[![docs.rs](https://docs.rs/supra-verifier-solana/badge.svg)](https://docs.rs/supra-verifier-solana/0.1.0/supra_verifier_solana/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 Independent verification of **pair-bound Supra pull-oracle proofs on Solana**.
